@@ -21,7 +21,6 @@ func _ready():
 func _process(_delta):
 	$dialogArrow.visible = finished
 	if Input.is_action_just_pressed("interact") && get_tree().paused == true:
-		print("input!")
 		loadDialog()
 
 	
@@ -36,13 +35,11 @@ func loadDialog():
 		$Tween.start()
 	else:
 		get_tree().paused = false
-		print("here!")
 		emit_signal("dialogFinished")
 		self.queue_free()
 	dialogIdx += 1
 
 func setDialog(itemDialog):
-	print("in setDialog")
 	dialog.clear()
 	dialog = itemDialog
 	loadDialog()

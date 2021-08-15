@@ -44,6 +44,12 @@ func updateInvSlot(event: InputEvent, invSlot: InventorySlot):
 						heldItem = null
 						invSlot.item.queue_free()
 						invSlot.item = null
+					elif invSlot.item is Potion:
+						get_owner().updateForm("Skeleton")
+						heldItem.queue_free()
+						heldItem = null
+						invSlot.item.queue_free()
+						invSlot.item = null
 		elif event.button_index == BUTTON_MIDDLE && event.pressed:
 			if heldItem == null && invSlot.item != null:
 				invSlot.item.queue_free()

@@ -8,7 +8,7 @@
 [ext_resource path="res://UI/TitleScreen/Code/Fade.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Stages/Code/StageOne.gd" type="Script" id=7]
 [ext_resource path="res://GlobalAssets/AnimatedBackground.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Items/Code/DogComb.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Items/Code/Comb.tscn" type="PackedScene" id=9]
 
 [node name="StageOne" type="Node"]
 script = ExtResource( 7 )
