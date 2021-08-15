@@ -46,10 +46,10 @@ interactorNodePath = NodePath("..")
 interactionTextNodePath = NodePath("Label")
 
 [node name="Label" type="Label" parent="InteractorUI"]
-margin_left = -38.2004
-margin_top = -13.7343
-margin_right = 44.7996
-margin_bottom = 9.2657
+margin_left = -37.4513
+margin_top = 1.24877
+margin_right = 45.5487
+margin_bottom = 24.2488
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.760784, 0.682353, 1, 1 )
 text = "Interact"

@@ -1,12 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Player/Code/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Items/Code/Key.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Items/Code/Book.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Items/Code/Potion.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Items/Code/Feather.tscn" type="PackedScene" id=5]
+[ext_resource path="res://UI/TitleScreen/Code/Fade.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Stages/Code/StageOne.gd" type="Script" id=7]
 
 [node name="StageOne" type="Node"]
+script = ExtResource( 7 )
 
 [node name="YSort" type="YSort" parent="."]
 
@@ -14,28 +17,33 @@
 position = Vector2( 493, 328 )
 
 [node name="Potion" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 348, 423 )
+position = Vector2( 317.276, 175.565 )
+
+[node name="Potion2" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 410.508, 179.803 )
 
 [node name="Key" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 250.985, 112.429 )
+position = Vector2( 579.418, 175.417 )
 
 [node name="Key2" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 258.561, 317.33 )
+position = Vector2( 487.405, 180.079 )
 
 [node name="Key3" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 509.915, 212.127 )
+position = Vector2( 836.23, 181.882 )
 
 [node name="Key4" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 387.703, 162.36 )
+position = Vector2( 710.839, 177.672 )
 
 [node name="Book" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 610, 194 )
+position = Vector2( 955.385, 187.063 )
 
 [node name="Book2" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 100, 347 )
+position = Vector2( 71.3945, 181.144 )
 
 [node name="Book3" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 179, 473 )
+position = Vector2( 154.632, 175.77 )
 
 [node name="Feather" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 123, 177 )
+position = Vector2( 231.065, 181.717 )
+
+[node name="Fade" parent="." instance=ExtResource( 6 )]

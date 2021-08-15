@@ -6,21 +6,27 @@ func _ready():
 	interactionText = "Key"
 	
 	skeletonDialogText = [
-		"This is skeleton text",
-		"With a second box"
+		"Oh a key, this should be useful."
 	]
 	
 	dogDialogText = [
-		"Dog Dialog Text"
+		"Shiny!",
+	]
+	
+	chickenDialogText = [
+		"*caw* It's a key.",
 	]
 
 
-	
 func onInteraction(interactorParent):
 	dialogText = getDialog(interactorParent)
-	spawnDialog()
 	if interactorParent.addItemToInventory(itemName) == true:
 		pickedUp = true
+	else:
+		inventoryFull()
+	
+	spawnDialog()
+
 
 func _on_DialogBox_dialogFinished():
 	if pickedUp == true:

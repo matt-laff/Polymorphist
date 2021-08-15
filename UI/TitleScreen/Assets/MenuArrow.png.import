@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DialogBoxBG3.png-778fca43dae797665055d8ea5334ab2c.stex"
+path="res://.import/MenuArrow.png-c7d3efdfac3d16a56251d77aad6a0237.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/DialogBox/Assets/DialogBoxBG3.png"
-dest_files=[ "res://.import/DialogBoxBG3.png-778fca43dae797665055d8ea5334ab2c.stex" ]
+source_file="res://UI/TitleScreen/Assets/MenuArrow.png"
+dest_files=[ "res://.import/MenuArrow.png-c7d3efdfac3d16a56251d77aad6a0237.stex" ]
 
 [params]
 
