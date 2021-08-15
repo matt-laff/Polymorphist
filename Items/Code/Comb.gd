@@ -3,7 +3,7 @@ extends TransformableItem
 
 
 func _ready():
-	itemName = "DogComb"
+	itemName = "Comb"
 	interactionText = "Pick Up"
 	formChange = "Dog"
 	

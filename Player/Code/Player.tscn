@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Player/Code/Player.gd" type="Script" id=1]
 [ext_resource path="res://GlobalAssets/basicShadow.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Player/Code/Explosion.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Player/Code/Interactor.tscn" type="PackedScene" id=6]
 [ext_resource path="res://UI/Inventory/Code/Inventory.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Player/Assets/DogsBody.png" type="Texture" id=8]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 3.88604
@@ -150,7 +151,141 @@ tracks/0/keys = {
 "values": [ 9, 10, 11, 10 ]
 }
 
+[sub_resource type="Animation" id=24]
+resource_name = "DogIdle"
+length = 1.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Dog:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 0.6, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 22, 21, 23, 22 ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "DogIdleLeft"
+length = 1.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Dog:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 0.6, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 16, 17, 15, 16 ]
+}
+
 [sub_resource type="Animation" id=10]
+resource_name = "DogIdleRight"
+length = 1.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Dog:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 0.6, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 13, 12, 14, 13 ]
+}
+
+[sub_resource type="Animation" id=25]
+resource_name = "DogIdleUp"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Dog:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 19, 20 ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "DogWalkDown"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Dog:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 1 ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "DogWalkLeft"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Dog:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5, 4 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "DogWalkRight"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Dog:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 7, 8, 7 ]
+}
+
+[sub_resource type="Animation" id=14]
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Dog:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 9, 10, 11, 10 ]
+}
+
+[sub_resource type="Animation" id=15]
 length = 1.5
 loop = true
 tracks/0/type = "value"
@@ -166,7 +301,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 4, 4, 4, 3, 2, 1 ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=16]
 length = 1.6
 loop = true
 tracks/0/type = "value"
@@ -182,7 +317,7 @@ tracks/0/keys = {
 "values": [ 12, 12, 13, 14, 15, 16, 17, 16, 15, 14, 13, 12 ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=17]
 length = 1.6
 loop = true
 tracks/0/type = "value"
@@ -198,7 +333,7 @@ tracks/0/keys = {
 "values": [ 35, 34, 33, 32, 31, 30, 31, 32, 33, 34, 35 ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=18]
 length = 0.9
 loop = true
 tracks/0/type = "value"
@@ -214,7 +349,7 @@ tracks/0/keys = {
 "values": [ 38, 37 ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=19]
 length = 1.6
 loop = true
 tracks/0/type = "value"
@@ -230,7 +365,7 @@ tracks/0/keys = {
 "values": [ 6, 5, 8, 7, 9, 10, 11, 10 ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=20]
 length = 0.8
 loop = true
 step = 0.2
@@ -247,7 +382,7 @@ tracks/0/keys = {
 "values": [ 18, 19, 20, 21 ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=21]
 length = 0.8
 loop = true
 step = 0.2
@@ -264,7 +399,7 @@ tracks/0/keys = {
 "values": [ 24, 26, 25, 26 ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=22]
 length = 0.8
 loop = true
 step = 0.2
@@ -306,6 +441,12 @@ frame = 38
 
 [node name="Dog" type="Sprite" parent="."]
 visible = false
+position = Vector2( -2.74315, -30.5383 )
+scale = Vector2( 2.575, 2.575 )
+texture = ExtResource( 8 )
+hframes = 3
+vframes = 8
+frame = 23
 
 [node name="Chicken" type="Sprite" parent="."]
 visible = false
@@ -314,7 +455,7 @@ scale = Vector2( 1.95128, 1.95128 )
 texture = ExtResource( 4 )
 hframes = 3
 vframes = 10
-frame = 10
+frame = 13
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "SkeletonIdle"
@@ -326,14 +467,22 @@ anims/ChickenWalkDown = SubResource( 6 )
 anims/ChickenWalkLeft = SubResource( 7 )
 anims/ChickenWalkRight = SubResource( 8 )
 anims/ChickenWalkUp = SubResource( 9 )
-anims/SkeletonIdle = SubResource( 10 )
-anims/SkeletonIdleLeft = SubResource( 11 )
-anims/SkeletonIdleRight = SubResource( 12 )
-anims/SkeletonIdleUp = SubResource( 13 )
-anims/SkeletonWalkDown = SubResource( 14 )
-anims/SkeletonWalkLeft = SubResource( 15 )
-anims/SkeletonWalkRight = SubResource( 16 )
-anims/SkeletonWalkUp = SubResource( 17 )
+anims/DogIdle = SubResource( 24 )
+anims/DogIdleLeft = SubResource( 23 )
+anims/DogIdleRight = SubResource( 10 )
+anims/DogIdleUp = SubResource( 25 )
+anims/DogWalkDown = SubResource( 11 )
+anims/DogWalkLeft = SubResource( 12 )
+anims/DogWalkRight = SubResource( 13 )
+anims/DogWalkUp = SubResource( 14 )
+anims/SkeletonIdle = SubResource( 15 )
+anims/SkeletonIdleLeft = SubResource( 16 )
+anims/SkeletonIdleRight = SubResource( 17 )
+anims/SkeletonIdleUp = SubResource( 18 )
+anims/SkeletonWalkDown = SubResource( 19 )
+anims/SkeletonWalkLeft = SubResource( 20 )
+anims/SkeletonWalkRight = SubResource( 21 )
+anims/SkeletonWalkUp = SubResource( 22 )
 
 [node name="basicShadow" parent="." instance=ExtResource( 2 )]
 show_behind_parent = true

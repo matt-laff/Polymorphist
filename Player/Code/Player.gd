@@ -17,6 +17,14 @@ func _process(_delta):
 			updateForm("Chicken")
 		else:
 			updateForm("Skeleton")
+	if Input.is_action_just_pressed("spawnPotion"):
+		$Inventory.addItem("Potion")
+	if Input.is_action_just_pressed("spawnKey"):
+		$Inventory.addItem("Key")
+	if Input.is_action_just_pressed("spawnFeather"):
+		$Inventory.addItem("Feather")
+	if Input.is_action_just_pressed("spawnComb"):
+		$Inventory.addItem("Comb")
 
 #==================
 
@@ -81,7 +89,7 @@ func updateForm(newForm):
 		"Chicken":
 			sprite = $Chicken
 		"Dog":
-			pass # DELETE THIS
+			sprite = $Dog
 	sprite.show()
 	
 
