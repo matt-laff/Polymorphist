@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Player/Code/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Items/Code/Key.tscn" type="PackedScene" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Items/Code/Feather.tscn" type="PackedScene" id=5]
 [ext_resource path="res://UI/TitleScreen/Code/Fade.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Stages/Code/StageOne.gd" type="Script" id=7]
+[ext_resource path="res://GlobalAssets/AnimatedBackground.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Items/Code/DogComb.tscn" type="PackedScene" id=9]
 
 [node name="StageOne" type="Node"]
 script = ExtResource( 7 )
@@ -31,6 +33,9 @@ position = Vector2( 487.405, 180.079 )
 [node name="Key3" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 836.23, 181.882 )
 
+[node name="DogComb" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 182.82, 322.793 )
+
 [node name="Key4" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 710.839, 177.672 )
 
@@ -47,3 +52,12 @@ position = Vector2( 154.632, 175.77 )
 position = Vector2( 231.065, 181.717 )
 
 [node name="Fade" parent="." instance=ExtResource( 6 )]
+
+[node name="AnimatedBackground" parent="." instance=ExtResource( 8 )]
+pause_mode = 2
+visible = false
+
+[node name="notificationPosition" type="Position2D" parent="."]
+position = Vector2( 245.407, 407.754 )
+
+[connection signal="fadeFinished" from="Fade" to="." method="_on_Fade_fadeFinished"]
