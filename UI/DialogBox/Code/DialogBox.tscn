@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/DialogBox/Assets/DialogBoxBG3.png" type="Texture" id=1]
+[ext_resource path="res://GlobalAssets/pixelFont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://UI/DialogBox/Code/DialogBox.gd" type="Script" id=3]
+[ext_resource path="res://Items/Assets/FeatherPixelArt.png" type="Texture" id=4]
+
+[node name="DialogBox" type="Control"]
+anchor_left = 0.497
+anchor_top = 1.0
+anchor_right = 0.497
+anchor_bottom = 1.0
+margin_left = -263.206
+margin_top = -301.837
+margin_right = 263.794
+margin_bottom = -139.837
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 0.698039, 0.211765, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.25098, 0.0588235, 0.4, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+bbcode_enabled = true
+bbcode_text = "This text is from the editor window"
+text = "This text is from the editor window"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="dialogArrow" type="Sprite" parent="."]
+position = Vector2( 495.34, 129.18 )
+scale = Vector2( 0.64364, 0.64364 )
+texture = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="dialogArrow"]
+
+[connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]

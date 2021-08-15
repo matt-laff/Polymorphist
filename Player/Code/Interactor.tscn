@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://GlobalAssets/ChiKareGo2.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Player/Assets/InteractionIcon.png" type="Texture" id=2]
+[ext_resource path="res://Player/Code/Interactor.gd" type="Script" id=3]
+[ext_resource path="res://Player/Code/InteractorUI.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 19.822, 31.6682 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+outline_size = 2
+outline_color = Color( 0.215686, 0.184314, 0.313726, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "active"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("InteractorIcon:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -44.013 ), Vector2( 0, -52 ) ]
+}
+
+[node name="Interactor" type="Area2D"]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="InteractorUI" type="Control" parent="."]
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+interactorNodePath = NodePath("..")
+interactionTextNodePath = NodePath("Label")
+
+[node name="Label" type="Label" parent="InteractorUI"]
+margin_left = -38.2004
+margin_top = -13.7343
+margin_right = 44.7996
+margin_bottom = 9.2657
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.760784, 0.682353, 1, 1 )
+text = "Interact"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InteractorIcon" type="Sprite" parent="InteractorUI"]
+position = Vector2( 0.0529633, -12.3327 )
+scale = Vector2( 1.98326, 1.98326 )
+texture = ExtResource( 2 )
+hframes = 3
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="InteractorUI"]
+anims/active = SubResource( 3 )
+
+[connection signal="body_entered" from="." to="." method="_on_Interactor_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Interactor_body_exited"]

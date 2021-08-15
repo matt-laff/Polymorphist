@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Player/Code/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Items/Code/Key.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Items/Code/Book.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Items/Code/Potion.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Items/Code/Feather.tscn" type="PackedScene" id=5]
+
+[node name="StageOne" type="Node"]
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 493, 328 )
+
+[node name="Potion" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 348, 423 )
+
+[node name="Key" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 250.985, 112.429 )
+
+[node name="Key2" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 258.561, 317.33 )
+
+[node name="Key3" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 509.915, 212.127 )
+
+[node name="Key4" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 387.703, 162.36 )
+
+[node name="Book" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 610, 194 )
+
+[node name="Book2" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 100, 347 )
+
+[node name="Book3" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 179, 473 )
+
+[node name="Feather" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 123, 177 )
