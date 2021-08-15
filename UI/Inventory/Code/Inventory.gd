@@ -1,7 +1,7 @@
 extends Node2D
 
-#
-#const slotClass = preload("res://UI/Inventory/Code/SlotTemplate.gd")
+
+onready var screenSize = get_viewport_rect().size
 onready var numSlots = $InvSlotContainer.get_children()
 var heldItem = null
 
@@ -15,6 +15,8 @@ func _process(_delta):
 	if Input.is_action_just_pressed("inventory"):
 		self.visible = !self.visible
 	self.position = Vector2(get_owner().position.x + 30, get_owner().position.y - 230)
+	self.position.x = clamp(position.x, 0, screenSize.x - 230)
+	self.position.y = clamp(position.y, 0, screenSize.y)
 		
 func updateInvSlot(event: InputEvent, invSlot: InventorySlot):
 	if event is InputEventMouseButton:
@@ -55,5 +57,5 @@ func addItem(itemName) -> bool:
 	for invSlot in numSlots:
 		if invSlot.item == null:
 			invSlot.itemInit(itemName)
-			return true
+			return true		
 	return false

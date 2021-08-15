@@ -4,6 +4,7 @@ class_name dialogBox
 export var scrollSpd: float = .6
 signal dialogFinished
 
+
 var dialog = [
 	"This is the dialog that comes from the dialogBox itself"
 ]
@@ -15,13 +16,14 @@ onready var text = $RichTextLabel
 func _ready():
 	self.set_as_toplevel(true)
 	self.set_global_position(Vector2(15, 150))
-	print(self.rect_global_position)
+
 		
 func _process(_delta):
 	$dialogArrow.visible = finished
 	if Input.is_action_just_pressed("interact") && get_tree().paused == true:
 		print("input!")
 		loadDialog()
+
 	
 func loadDialog():
 	if dialogIdx < dialog.size():

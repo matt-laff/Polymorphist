@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DialogBoxBG3.png-778fca43dae797665055d8ea5334ab2c.stex"
+path="res://.import/titleLogo.png-c8d16548a0d9d35811ded11d2038dc8d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/DialogBox/Assets/DialogBoxBG3.png"
-dest_files=[ "res://.import/DialogBoxBG3.png-778fca43dae797665055d8ea5334ab2c.stex" ]
+source_file="res://UI/TitleScreen/Assets/titleLogo.png"
+dest_files=[ "res://.import/titleLogo.png-c8d16548a0d9d35811ded11d2038dc8d.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

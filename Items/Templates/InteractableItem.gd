@@ -4,8 +4,15 @@ class_name InteractableItem
 var itemName: String = "defaultItemName"
 var dialogBox_ps: PackedScene = preload("res://UI/DialogBox/Code/DialogBox.tscn")
 
+onready var screenSize = get_viewport_rect().size
+
 var dialogText = [
 	"default text"
+]
+
+var inventoryFullText = [
+	"Your inventory is full, you can't pick up any more!",
+	"Press [Middle Mouse Button] on an item in your inventory to delete it and make room"
 ]
 
 var skeletonDialogText = [
@@ -33,6 +40,8 @@ func spawnDialog():
 	myDialog.setDialog(dialogText)
 	myDialog.connect("dialogFinished", self, "_on_DialogBox_dialogFinished")
 	myDialog.set_global_position(self.global_position)
+	myDialog.rect_position.x = clamp(myDialog.rect_position.x, 0, screenSize.x -500)
+	myDialog.rect_position.y = clamp(myDialog.rect_position.y, 0, screenSize.y)
 
 
 	
@@ -59,3 +68,6 @@ func getDialog(interactorParent):
 				"I don't have dialog for you yet"
 			]
 			return noDialog
+			
+func inventoryFull():
+	dialogText = inventoryFullText

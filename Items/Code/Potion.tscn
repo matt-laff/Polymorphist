@@ -5,7 +5,7 @@
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 6.21364
-height = 13.5053
+height = 18.2303
 
 [node name="Potion" type="StaticBody2D"]
 script = ExtResource( 1 )
@@ -15,5 +15,5 @@ scale = Vector2( 1.58465, 1.58465 )
 texture = ExtResource( 2 )
 
 [node name="Collider" type="CollisionShape2D" parent="."]
-position = Vector2( -0.293594, 10.1338 )
+position = Vector2( -0.293594, 7.61111 )
 shape = SubResource( 1 )

@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=2]
 
-[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://Player/Code/Player.gd" type="Script" id=1]
 [ext_resource path="res://GlobalAssets/basicShadow.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player/Assets/SkeletonEyes.png" type="Texture" id=3]
 [ext_resource path="res://Player/Assets/zombieChicken.png" type="Texture" id=4]
@@ -12,7 +12,7 @@
 radius = 3.88604
 height = 20.4391
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=2]
 resource_name = "ChickenIdle"
 length = 1.1
 loop = true
@@ -30,7 +30,7 @@ tracks/0/keys = {
 "values": [ 12, 13, 14 ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=3]
 resource_name = "ChickenIdleLeft"
 length = 0.9
 loop = true
@@ -48,7 +48,7 @@ tracks/0/keys = {
 "values": [ 15, 16, 15 ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=4]
 resource_name = "ChickenIdleRight"
 length = 1.1
 loop = true
@@ -65,7 +65,7 @@ tracks/0/keys = {
 "values": [ 18, 19, 18 ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=5]
 resource_name = "ChickenIdleUp"
 length = 1.5
 loop = true
@@ -83,8 +83,7 @@ tracks/0/keys = {
 "values": [ 21, 22, 23, 22 ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "ChickenWalkDown"
+[sub_resource type="Animation" id=6]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -100,7 +99,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 1 ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=7]
 resource_name = "ChickenWalkLeft"
 length = 0.4
 loop = true
@@ -117,7 +116,7 @@ tracks/0/keys = {
 "values": [ 3, 4, 5, 4 ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=8]
 resource_name = "ChickenWalkRight"
 length = 0.4
 loop = true
@@ -134,7 +133,7 @@ tracks/0/keys = {
 "values": [ 6, 7, 8, 7 ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=9]
 resource_name = "ChickenWalkUp"
 length = 0.4
 loop = true
@@ -151,8 +150,7 @@ tracks/0/keys = {
 "values": [ 9, 10, 11, 10 ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "SkeletonIdle"
+[sub_resource type="Animation" id=10]
 length = 1.5
 loop = true
 tracks/0/type = "value"
@@ -168,8 +166,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 4, 4, 4, 3, 2, 1 ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "SkeletonIdleLeft"
+[sub_resource type="Animation" id=11]
 length = 1.6
 loop = true
 tracks/0/type = "value"
@@ -185,8 +182,7 @@ tracks/0/keys = {
 "values": [ 12, 12, 13, 14, 15, 16, 17, 16, 15, 14, 13, 12 ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "SkeletonIdleRight"
+[sub_resource type="Animation" id=12]
 length = 1.6
 loop = true
 tracks/0/type = "value"
@@ -202,8 +198,7 @@ tracks/0/keys = {
 "values": [ 35, 34, 33, 32, 31, 30, 31, 32, 33, 34, 35 ]
 }
 
-[sub_resource type="Animation" id=7]
-resource_name = "SkeletonIdleUp"
+[sub_resource type="Animation" id=13]
 length = 0.9
 loop = true
 tracks/0/type = "value"
@@ -219,8 +214,7 @@ tracks/0/keys = {
 "values": [ 38, 37 ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "SkeletonWalkDown"
+[sub_resource type="Animation" id=14]
 length = 1.6
 loop = true
 tracks/0/type = "value"
@@ -236,8 +230,7 @@ tracks/0/keys = {
 "values": [ 6, 5, 8, 7, 9, 10, 11, 10 ]
 }
 
-[sub_resource type="Animation" id=8]
-resource_name = "SkeletonWalkLeft"
+[sub_resource type="Animation" id=15]
 length = 0.8
 loop = true
 step = 0.2
@@ -254,8 +247,7 @@ tracks/0/keys = {
 "values": [ 18, 19, 20, 21 ]
 }
 
-[sub_resource type="Animation" id=9]
-resource_name = "SkeletonWalkRight"
+[sub_resource type="Animation" id=16]
 length = 0.8
 loop = true
 step = 0.2
@@ -272,8 +264,7 @@ tracks/0/keys = {
 "values": [ 24, 26, 25, 26 ]
 }
 
-[sub_resource type="Animation" id=10]
-resource_name = "SkeletonWalkUp"
+[sub_resource type="Animation" id=17]
 length = 0.8
 loop = true
 step = 0.2
@@ -299,7 +290,6 @@ position = Vector2( -0.603546, -24.9896 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.390064, -1.34818 )
 rotation = 1.5815
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="Explosion" parent="." instance=ExtResource( 5 )]
@@ -328,24 +318,25 @@ frame = 10
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "SkeletonIdle"
-anims/ChickenIdle = SubResource( 11 )
-anims/ChickenIdleLeft = SubResource( 15 )
-anims/ChickenIdleRight = SubResource( 16 )
-anims/ChickenIdleUp = SubResource( 17 )
-anims/ChickenWalkDown = SubResource( 4 )
-anims/ChickenWalkLeft = SubResource( 12 )
-anims/ChickenWalkRight = SubResource( 13 )
-anims/ChickenWalkUp = SubResource( 14 )
-anims/SkeletonIdle = SubResource( 2 )
-anims/SkeletonIdleLeft = SubResource( 5 )
-anims/SkeletonIdleRight = SubResource( 6 )
-anims/SkeletonIdleUp = SubResource( 7 )
-anims/SkeletonWalkDown = SubResource( 3 )
-anims/SkeletonWalkLeft = SubResource( 8 )
-anims/SkeletonWalkRight = SubResource( 9 )
-anims/SkeletonWalkUp = SubResource( 10 )
+anims/ChickenIdle = SubResource( 2 )
+anims/ChickenIdleLeft = SubResource( 3 )
+anims/ChickenIdleRight = SubResource( 4 )
+anims/ChickenIdleUp = SubResource( 5 )
+anims/ChickenWalkDown = SubResource( 6 )
+anims/ChickenWalkLeft = SubResource( 7 )
+anims/ChickenWalkRight = SubResource( 8 )
+anims/ChickenWalkUp = SubResource( 9 )
+anims/SkeletonIdle = SubResource( 10 )
+anims/SkeletonIdleLeft = SubResource( 11 )
+anims/SkeletonIdleRight = SubResource( 12 )
+anims/SkeletonIdleUp = SubResource( 13 )
+anims/SkeletonWalkDown = SubResource( 14 )
+anims/SkeletonWalkLeft = SubResource( 15 )
+anims/SkeletonWalkRight = SubResource( 16 )
+anims/SkeletonWalkUp = SubResource( 17 )
 
 [node name="basicShadow" parent="." instance=ExtResource( 2 )]
+show_behind_parent = true
 position = Vector2( -0.54518, -15.8719 )
 scale = Vector2( 0.631223, 0.716542 )
 

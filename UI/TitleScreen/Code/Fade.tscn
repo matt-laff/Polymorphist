@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://UI/TitleScreen/Code/Fade.gd" type="Script" id=1]
+
+[sub_resource type="Animation" id=2]
+resource_name = "FadeIn"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0666667, 0, 0.109804, 1 ), Color( 0.0666667, 0, 0.109804, 0 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "FadeOut"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0666667, 0, 0.109804, 0 ), Color( 0.0509804, 0, 0.0862745, 1 ) ]
+}
+
+[node name="Fade" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0.0666667, 0, 0.109804, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/FadeIn = SubResource( 2 )
+anims/FadeOut = SubResource( 1 )
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

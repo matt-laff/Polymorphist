@@ -6,7 +6,7 @@ var speed = 225
 onready var animationPlayer: AnimationPlayer = $AnimationPlayer
 onready var currentForm = "Skeleton"
 onready var sprite = $Skeleton
-
+onready var screenSize = get_viewport_rect().size
 
 #CHEAT AND TEST KEYS
 #==================
@@ -37,6 +37,8 @@ func _physics_process(_delta):
 	if Input.is_action_just_released("sprint"):
 		speed = 225
 		animationPlayer.playback_speed = 1
+	self.position.x = clamp(position.x, 0, screenSize.x)
+	self.position.y = clamp(position.y, 0, screenSize.y)
 
 func setDirection(direction):
 	direction.x = int(Input.is_action_pressed("right")) - int(Input.is_action_pressed("left"))
