@@ -49,10 +49,12 @@ func _on_DialogBox_dialogFinished():
 	elif myDialogText == playerDialog:
 		myDialogText = introDialogText
 		$AnimatedBackground.show()
+		$AnimatedBackground/AnimationPlayer.play("BackgroundBlur")
 		$AnimatedBackground.modulate.a = .5
 		spawnDialog()
 	else:
 		$AnimatedBackground.hide()
+		$AnimatedBackground/AnimationPlayer.stop()
 
 
 

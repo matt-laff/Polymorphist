@@ -151,7 +151,7 @@ tracks/0/keys = {
 "values": [ 9, 10, 11, 10 ]
 }
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=10]
 resource_name = "DogIdle"
 length = 1.6
 loop = true
@@ -168,7 +168,7 @@ tracks/0/keys = {
 "values": [ 22, 21, 23, 22 ]
 }
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=11]
 resource_name = "DogIdleLeft"
 length = 1.6
 loop = true
@@ -185,8 +185,7 @@ tracks/0/keys = {
 "values": [ 16, 17, 15, 16 ]
 }
 
-[sub_resource type="Animation" id=10]
-resource_name = "DogIdleRight"
+[sub_resource type="Animation" id=12]
 length = 1.6
 loop = true
 tracks/0/type = "value"
@@ -202,7 +201,7 @@ tracks/0/keys = {
 "values": [ 13, 12, 14, 13 ]
 }
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id=13]
 resource_name = "DogIdleUp"
 loop = true
 tracks/0/type = "value"
@@ -218,8 +217,7 @@ tracks/0/keys = {
 "values": [ 19, 20 ]
 }
 
-[sub_resource type="Animation" id=11]
-resource_name = "DogWalkDown"
+[sub_resource type="Animation" id=14]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -235,8 +233,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 1 ]
 }
 
-[sub_resource type="Animation" id=12]
-resource_name = "DogWalkLeft"
+[sub_resource type="Animation" id=15]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -252,8 +249,7 @@ tracks/0/keys = {
 "values": [ 3, 4, 5, 4 ]
 }
 
-[sub_resource type="Animation" id=13]
-resource_name = "DogWalkRight"
+[sub_resource type="Animation" id=16]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -269,7 +265,7 @@ tracks/0/keys = {
 "values": [ 6, 7, 8, 7 ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=17]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -285,7 +281,7 @@ tracks/0/keys = {
 "values": [ 9, 10, 11, 10 ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=18]
 length = 1.5
 loop = true
 tracks/0/type = "value"
@@ -301,7 +297,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 4, 4, 4, 3, 2, 1 ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=19]
 length = 1.6
 loop = true
 tracks/0/type = "value"
@@ -317,7 +313,7 @@ tracks/0/keys = {
 "values": [ 12, 12, 13, 14, 15, 16, 17, 16, 15, 14, 13, 12 ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=20]
 length = 1.6
 loop = true
 tracks/0/type = "value"
@@ -333,7 +329,7 @@ tracks/0/keys = {
 "values": [ 35, 34, 33, 32, 31, 30, 31, 32, 33, 34, 35 ]
 }
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="Animation" id=21]
 length = 0.9
 loop = true
 tracks/0/type = "value"
@@ -349,7 +345,7 @@ tracks/0/keys = {
 "values": [ 38, 37 ]
 }
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=22]
 length = 1.6
 loop = true
 tracks/0/type = "value"
@@ -365,7 +361,7 @@ tracks/0/keys = {
 "values": [ 6, 5, 8, 7, 9, 10, 11, 10 ]
 }
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=23]
 length = 0.8
 loop = true
 step = 0.2
@@ -382,7 +378,7 @@ tracks/0/keys = {
 "values": [ 18, 19, 20, 21 ]
 }
 
-[sub_resource type="Animation" id=21]
+[sub_resource type="Animation" id=24]
 length = 0.8
 loop = true
 step = 0.2
@@ -399,7 +395,7 @@ tracks/0/keys = {
 "values": [ 24, 26, 25, 26 ]
 }
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=25]
 length = 0.8
 loop = true
 step = 0.2
@@ -467,22 +463,22 @@ anims/ChickenWalkDown = SubResource( 6 )
 anims/ChickenWalkLeft = SubResource( 7 )
 anims/ChickenWalkRight = SubResource( 8 )
 anims/ChickenWalkUp = SubResource( 9 )
-anims/DogIdle = SubResource( 24 )
-anims/DogIdleLeft = SubResource( 23 )
-anims/DogIdleRight = SubResource( 10 )
-anims/DogIdleUp = SubResource( 25 )
-anims/DogWalkDown = SubResource( 11 )
-anims/DogWalkLeft = SubResource( 12 )
-anims/DogWalkRight = SubResource( 13 )
-anims/DogWalkUp = SubResource( 14 )
-anims/SkeletonIdle = SubResource( 15 )
-anims/SkeletonIdleLeft = SubResource( 16 )
-anims/SkeletonIdleRight = SubResource( 17 )
-anims/SkeletonIdleUp = SubResource( 18 )
-anims/SkeletonWalkDown = SubResource( 19 )
-anims/SkeletonWalkLeft = SubResource( 20 )
-anims/SkeletonWalkRight = SubResource( 21 )
-anims/SkeletonWalkUp = SubResource( 22 )
+anims/DogIdle = SubResource( 10 )
+anims/DogIdleLeft = SubResource( 11 )
+anims/DogIdleRight = SubResource( 12 )
+anims/DogIdleUp = SubResource( 13 )
+anims/DogWalkDown = SubResource( 14 )
+anims/DogWalkLeft = SubResource( 15 )
+anims/DogWalkRight = SubResource( 16 )
+anims/DogWalkUp = SubResource( 17 )
+anims/SkeletonIdle = SubResource( 18 )
+anims/SkeletonIdleLeft = SubResource( 19 )
+anims/SkeletonIdleRight = SubResource( 20 )
+anims/SkeletonIdleUp = SubResource( 21 )
+anims/SkeletonWalkDown = SubResource( 22 )
+anims/SkeletonWalkLeft = SubResource( 23 )
+anims/SkeletonWalkRight = SubResource( 24 )
+anims/SkeletonWalkUp = SubResource( 25 )
 
 [node name="basicShadow" parent="." instance=ExtResource( 2 )]
 show_behind_parent = true
@@ -490,3 +486,6 @@ position = Vector2( -0.54518, -15.8719 )
 scale = Vector2( 0.631223, 0.716542 )
 
 [node name="Inventory" parent="." instance=ExtResource( 7 )]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
