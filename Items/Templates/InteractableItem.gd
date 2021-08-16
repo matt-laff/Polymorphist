@@ -40,8 +40,8 @@ func spawnDialog():
 	myDialog.setDialog(dialogText)
 	myDialog.connect("dialogFinished", self, "_on_DialogBox_dialogFinished")
 	myDialog.set_global_position(self.global_position)
-	myDialog.rect_position.x = clamp(myDialog.rect_position.x, 0, screenSize.x -500)
-	myDialog.rect_position.y = clamp(myDialog.rect_position.y, 0, screenSize.y)
+#	myDialog.rect_position.x = clamp(myDialog.rect_position.x, 0, screenSize.x -500)
+#	myDialog.rect_position.y = clamp(myDialog.rect_position.y, 0, screenSize.y)
 
 
 	

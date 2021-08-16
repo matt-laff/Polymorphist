@@ -1,63 +1,68 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Player/Code/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Items/Code/Key.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Items/Code/Book.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Items/Code/Potion.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Items/Code/Feather.tscn" type="PackedScene" id=5]
 [ext_resource path="res://UI/TitleScreen/Code/Fade.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Stages/Code/StageOne.gd" type="Script" id=7]
 [ext_resource path="res://GlobalAssets/AnimatedBackground.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Items/Code/Comb.tscn" type="PackedScene" id=9]
+[ext_resource path="res://GlobalAssets/floorBackground.tscn" type="PackedScene" id=10]
+[ext_resource path="res://TileSet/Code/TileMapTemplate.tscn" type="PackedScene" id=11]
 
 [node name="StageOne" type="Node"]
 script = ExtResource( 7 )
 
+[node name="floorBackground" parent="." instance=ExtResource( 10 )]
+show_behind_parent = true
+margin_left = 30.256
+margin_top = -7.4397
+margin_right = 30.256
+margin_bottom = -7.4397
+
+[node name="TileMapTemplate" parent="." instance=ExtResource( 11 )]
+position = Vector2( 30.256, -7.4397 )
+
 [node name="YSort" type="YSort" parent="."]
+position = Vector2( 30.256, -7.4397 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 493, 328 )
 
+[node name="DogComb" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 599.089, 153.96 )
+rotation = -1.53638
+
 [node name="Potion" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 317.276, 175.565 )
+position = Vector2( 99, 161 )
+rotation = -0.768191
 
 [node name="Potion2" parent="YSort" instance=ExtResource( 4 )]
-position = Vector2( 410.508, 179.803 )
+position = Vector2( 120.872, 160.954 )
+rotation = -0.0817888
 
-[node name="Key" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 579.418, 175.417 )
+[node name="Potion3" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 367.87, -39.0264 )
+rotation = -1.37127
 
-[node name="Key2" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 487.405, 180.079 )
+[node name="Potion4" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 364.605, 899.6 )
+rotation = -0.817545
 
-[node name="Key3" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 836.23, 181.882 )
-
-[node name="DogComb" parent="YSort" instance=ExtResource( 9 )]
-position = Vector2( 182.82, 322.793 )
-
-[node name="Key4" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 710.839, 177.672 )
+[node name="DogComb2" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 310.883, 324.278 )
 
 [node name="Book" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 955.385, 187.063 )
-
-[node name="Book2" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 71.3945, 181.144 )
-
-[node name="Book3" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 154.632, 175.77 )
-
-[node name="Feather" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 231.065, 181.717 )
+position = Vector2( 926, 167 )
 
 [node name="Fade" parent="." instance=ExtResource( 6 )]
+visible = false
 
 [node name="AnimatedBackground" parent="." instance=ExtResource( 8 )]
 pause_mode = 2
 visible = false
 
 [node name="notificationPosition" type="Position2D" parent="."]
-position = Vector2( 245.407, 407.754 )
+position = Vector2( 275.663, 400.314 )
 
 [connection signal="fadeFinished" from="Fade" to="." method="_on_Fade_fadeFinished"]
