@@ -21,7 +21,8 @@ var playerDialog = [
 		"Wait... ",
 		"WHAT HAPPENED TO MY BODY??",
 		"-------------------------",
-		"TODO: Add \"waking up \" animation after opening, add more to map level, add form-based combat?"
+		"TODO: Add \"waking up \" animation after opening, add more to map level, add form-based combat?",
+		"TODO: Add Game Over screen, add in-game menu Make player class w/ skeleton sprite and have forms extend from that"
 ]
 
 
