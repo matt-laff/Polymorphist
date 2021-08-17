@@ -100,3 +100,14 @@ func addItemToInventory(itemName) -> bool:
 		return true
 	else:
 		return false
+
+func hasItem(itemName) -> bool:
+	print("has item called")
+	if $Inventory.hasItem(itemName) == true:
+		print("has item in player")
+		return true
+	else:
+		return false
+		
+func removeItemFromInventory(itemName):
+	$Inventory.removeItem(itemName)

@@ -437,8 +437,8 @@ frame = 38
 
 [node name="Dog" type="Sprite" parent="."]
 visible = false
-position = Vector2( -2.74315, -30.5383 )
-scale = Vector2( 2.575, 2.575 )
+position = Vector2( -1.49315, -27.7883 )
+scale = Vector2( 1.8625, 1.8625 )
 texture = ExtResource( 8 )
 hframes = 3
 vframes = 8
@@ -451,7 +451,7 @@ scale = Vector2( 1.95128, 1.95128 )
 texture = ExtResource( 4 )
 hframes = 3
 vframes = 10
-frame = 13
+frame = 12
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "SkeletonIdle"
