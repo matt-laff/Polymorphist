@@ -14,7 +14,7 @@ func _ready():
 func _process(_delta):
 	if Input.is_action_just_pressed("inventory"):
 		self.visible = !self.visible
-	self.position = Vector2(get_owner().position.x + 30, get_owner().position.y - 40)
+	self.position = Vector2(get_owner().position.x + 70, get_owner().position.y - 40)
 ##	
 #	self.position.x = clamp(position.x, 0, screenSize.x - 230)
 ##	self.position.y = clamp(position.y, 0, screenSize.y)
