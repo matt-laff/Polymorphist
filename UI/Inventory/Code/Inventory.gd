@@ -39,7 +39,7 @@ func updateInvSlot(event: InputEvent, invSlot: InventorySlot):
 					heldItem.global_position = get_global_mouse_position()
 		elif event.button_index == BUTTON_RIGHT && event.pressed:
 				if heldItem is Potion && invSlot.item != null: # holding a potion and item in slot
-					if invSlot.item.canTransform:
+					if invSlot.item.canTransform && invSlot.item.formChange != get_owner().currentForm:
 						get_owner().updateForm(invSlot.item.formChange)
 						heldItem.queue_free()
 						heldItem = null
@@ -66,3 +66,18 @@ func addItem(itemName) -> bool:
 			invSlot.itemInit(itemName)
 			return true		
 	return false
+	
+func hasItem(itemName) -> bool:
+	for invSlot in numSlots:
+		if invSlot.item != null:
+			if invSlot.item.itemName == itemName:
+				return true
+	return false
+	
+func removeItem(itemName):
+	for invSlot in numSlots:
+		if invSlot.item != null:
+			if invSlot.item.itemName == itemName:
+				invSlot.item.queue_free()
+				invSlot.item = null
+				

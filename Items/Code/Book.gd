@@ -1,4 +1,4 @@
-extends PickableItem
+extends InteractableItem
 
 
 
@@ -25,18 +25,21 @@ func _ready():
 		"You shred the book to pieces with your mighty beak"
 	]
 
+	self.tutorialText = [
+		"TUTORIAL: I'm a book, I can't be picked up, but sometimes I have helpful information.",
+		"Watch out though, if you're in chicken form, you might be compelled to destroy me"
+	]
 	
 func onInteraction(interactorParent):
-	self.dialogText = getDialog(interactorParent)
-	if interactorParent.currentForm == "Chicken":
-		self.hide()
-	elif interactorParent.addItemToInventory(itemName) == true:
-		pickedUp = true
-	
+	if interactionCount == 0:
+		dialogText = tutorialText
+		interactionCount += 1
+	else:
+		self.dialogText = getDialog(interactorParent)
+		if interactorParent.currentForm == "Chicken":
+			self.hide()
 	spawnDialog()
 
 func _on_DialogBox_dialogFinished():
-	if pickedUp == true:
-		self.queue_free()
-	elif self.visible == false:
+	if self.visible == false:
 		self.queue_free()

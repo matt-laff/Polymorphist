@@ -4,10 +4,11 @@ var dialogBox_ps: PackedScene = preload("res://UI/DialogBox/Code/DialogBox.tscn"
 var myDialogText = []
 
 var introDialogText = [
-	"Welcome to [insert game name here]",
-	"You've been equipped with potions that will change you into different forms",
-	"Use the forms to find a way out of this strange place",
-	"And hopefully, you'll be able to find out who you are along the way..."
+	"Welcome to Polymorph! (working title)",
+	"Along the way, you'll find potions that, when combined with the right items...",
+	"... Will grant you the ability to change form. Use the forms to find a way out of this strange place...",
+	"...And hopefully, you'll be able to find out who you are along the way...",
+	"Have fun!"
 ]
 
 var cutsceneText = [
@@ -20,8 +21,7 @@ var playerDialog = [
 		"Wait... ",
 		"WHAT HAPPENED TO MY BODY??",
 		"-------------------------",
-		"TODO: inventory form change, tile map, \"waking up\" animation for cutscene",
-		"Also add scene changes if possible"
+		"TODO: Add \"waking up \" animation after opening, add more to map level, add form-based combat?"
 ]
 
 

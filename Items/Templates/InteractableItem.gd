@@ -6,6 +6,8 @@ var dialogBox_ps: PackedScene = preload("res://UI/DialogBox/Code/DialogBox.tscn"
 
 onready var screenSize = get_viewport_rect().size
 
+var interactionCount = 0
+
 var dialogText = [
 	"default text"
 ]
@@ -24,6 +26,10 @@ var dogDialogText = [
 
 var chickenDialogText = [
 	"Your chicken brain can't comprehend this"
+]
+
+var tutorialText = [
+	"This is a tutorial of what this item does"
 ]
 var interactionText: String = "default"
 
