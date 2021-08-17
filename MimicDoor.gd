@@ -70,7 +70,8 @@ func _on_DialogBox_dialogFinished():
 	if player.currentForm == "Dog":
 		self.queue_free()
 	elif !player.hasItem("Key"):
-		get_tree().quit()
+		player.gameOver()
+
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):

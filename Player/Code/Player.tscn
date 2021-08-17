@@ -451,7 +451,7 @@ scale = Vector2( 1.95128, 1.95128 )
 texture = ExtResource( 4 )
 hframes = 3
 vframes = 10
-frame = 12
+frame = 14
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "SkeletonIdle"
