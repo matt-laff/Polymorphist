@@ -8,29 +8,38 @@ onready var screenSize = get_viewport_rect().size
 
 var interactionCount = 0
 
-var dialogText = [
+export var dialogText = [
 	"default text"
 ]
 
-var inventoryFullText = [
+export var inventoryFullText = [
 	"Your inventory is full, you can't pick up any more!",
 	"Press [Middle Mouse Button] on an item in your inventory to delete it and make room"
 ]
 
-var skeletonDialogText = [
+export var skeletonDialogText = [
 	"I can't do anything with this yet"
 ]
-var dogDialogText = [
+export var dogDialogText = [
 	"The dog can't do anything with this yet"
 ]
 
-var chickenDialogText = [
+export var chickenDialogText = [
 	"Your chicken brain can't comprehend this"
 ]
 
-var tutorialText = [
+export var tutorialText = [
 	"This is a tutorial of what this item does"
 ]
+
+export var activeItemDialogText = [
+	"I can't do anything with this item"
+]
+
+var ratDialogText = [
+	"*squeak*"
+]
+
 var interactionText: String = "default"
 
 
@@ -69,6 +78,8 @@ func getDialog(interactorParent):
 			return dogDialogText
 		"Chicken":
 			return chickenDialogText
+		"Rat":
+			return ratDialogText
 		_:
 			var noDialog = [
 				"I don't have dialog for you yet"

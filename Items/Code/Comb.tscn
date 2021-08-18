@@ -1,16 +1,21 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Items/Assets/JewelPixelArt.png" type="Texture" id=1]
+[ext_resource path="res://Items/Assets/badComb.png" type="Texture" id=1]
 [ext_resource path="res://Items/Code/Comb.gd" type="Script" id=2]
 
 [node name="DogComb" type="StaticBody2D"]
-position = Vector2( 0.592037, -11.9977 )
+position = Vector2( 2.27573, -4.00016 )
 rotation = -0.768191
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 0.785056, 0.785056 )
+position = Vector2( 2.66666, -2.87827 )
+rotation = -0.0381439
+scale = Vector2( 1.17341, 1.17341 )
 texture = ExtResource( 1 )
 
 [node name="Collider" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -19.3715, 18.1363, -19.5202, 2.37928, -5.23496, -11.4644, 8.59856, 7.80042, -1.97937, 19.0282 )
+position = Vector2( 1.00631, -3.63073 )
+rotation = 1.17942
+scale = Vector2( 1.13947, 1.13947 )
+polygon = PoolVector2Array( -12.6809, 11.507, -18.1203, 5.00101, -7.41855, 4.61999, 12.2124, -5.47163, 12.0683, 0.867029, -1.41543, 9.96166 )

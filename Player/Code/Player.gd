@@ -45,7 +45,7 @@ func _physics_process(_delta):
 		direction = move_and_slide(direction * speed)
 		updateAnimation(direction)
 	else:
-		updateIdleAnimation(currentForm)
+		updateIdleAnimation()
 	if Input.is_action_pressed("sprint"):
 		speed = 300
 		animationPlayer.playback_speed = 1.35
@@ -76,7 +76,7 @@ func updateAnimation(direction):
 	elif direction.y > 0:
 		animationPlayer.play(currentForm + "WalkDown")
 	
-func updateIdleAnimation(currentForm):
+func updateIdleAnimation():
 	if animationPlayer.current_animation == (currentForm + "WalkDown"):
 		animationPlayer.play(currentForm + "Idle")
 	elif animationPlayer.current_animation == (currentForm + "WalkUp"):
@@ -97,6 +97,8 @@ func updateForm(newForm):
 			sprite = $Chicken
 		"Dog":
 			sprite = $Dog
+		"Rat":
+			sprite = $Rat
 		"Wyvern":
 			sprite = $Wyvern
 	sprite.show()

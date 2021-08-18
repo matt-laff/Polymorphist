@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://Player/Code/Player.gd" type="Script" id=1]
 [ext_resource path="res://GlobalAssets/basicShadow.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Player/Code/Interactor.tscn" type="PackedScene" id=6]
 [ext_resource path="res://UI/Inventory/Code/Inventory.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Player/Assets/DogsBody.png" type="Texture" id=8]
+[ext_resource path="res://Player/Assets/RatSheet.png" type="Texture" id=9]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 3.88604
@@ -281,7 +282,87 @@ tracks/0/keys = {
 "values": [ 9, 10, 11, 10 ]
 }
 
+[sub_resource type="Animation" id=28]
+resource_name = "RatIdle"
+
+[sub_resource type="Animation" id=29]
+resource_name = "RatIdleLeft"
+
+[sub_resource type="Animation" id=30]
+resource_name = "RatIdleRight"
+
+[sub_resource type="Animation" id=31]
+resource_name = "RatIdleUp"
+
+[sub_resource type="Animation" id=32]
+resource_name = "RatWalkDown"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Rat:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 1, 0 ]
+}
+
 [sub_resource type="Animation" id=18]
+resource_name = "RatWalkLeft"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Rat:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 4, 5 ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "RatWalkRight"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Rat:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 7, 8 ]
+}
+
+[sub_resource type="Animation" id=33]
+resource_name = "RatWalkUp"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Rat:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 9, 10 ]
+}
+
+[sub_resource type="Animation" id=20]
 length = 1.5
 loop = true
 tracks/0/type = "value"
@@ -297,7 +378,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 4, 4, 4, 3, 2, 1 ]
 }
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=21]
 length = 1.6
 loop = true
 tracks/0/type = "value"
@@ -313,7 +394,7 @@ tracks/0/keys = {
 "values": [ 12, 12, 13, 14, 15, 16, 17, 16, 15, 14, 13, 12 ]
 }
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=22]
 length = 1.6
 loop = true
 tracks/0/type = "value"
@@ -329,7 +410,7 @@ tracks/0/keys = {
 "values": [ 35, 34, 33, 32, 31, 30, 31, 32, 33, 34, 35 ]
 }
 
-[sub_resource type="Animation" id=21]
+[sub_resource type="Animation" id=23]
 length = 0.9
 loop = true
 tracks/0/type = "value"
@@ -345,7 +426,7 @@ tracks/0/keys = {
 "values": [ 38, 37 ]
 }
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=24]
 length = 1.6
 loop = true
 tracks/0/type = "value"
@@ -361,7 +442,7 @@ tracks/0/keys = {
 "values": [ 6, 5, 8, 7, 9, 10, 11, 10 ]
 }
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=25]
 length = 0.8
 loop = true
 step = 0.2
@@ -378,7 +459,7 @@ tracks/0/keys = {
 "values": [ 18, 19, 20, 21 ]
 }
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=26]
 length = 0.8
 loop = true
 step = 0.2
@@ -395,7 +476,7 @@ tracks/0/keys = {
 "values": [ 24, 26, 25, 26 ]
 }
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id=27]
 length = 0.8
 loop = true
 step = 0.2
@@ -451,7 +532,7 @@ scale = Vector2( 1.95128, 1.95128 )
 texture = ExtResource( 4 )
 hframes = 3
 vframes = 10
-frame = 14
+frame = 13
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "SkeletonIdle"
@@ -471,14 +552,22 @@ anims/DogWalkDown = SubResource( 14 )
 anims/DogWalkLeft = SubResource( 15 )
 anims/DogWalkRight = SubResource( 16 )
 anims/DogWalkUp = SubResource( 17 )
-anims/SkeletonIdle = SubResource( 18 )
-anims/SkeletonIdleLeft = SubResource( 19 )
-anims/SkeletonIdleRight = SubResource( 20 )
-anims/SkeletonIdleUp = SubResource( 21 )
-anims/SkeletonWalkDown = SubResource( 22 )
-anims/SkeletonWalkLeft = SubResource( 23 )
-anims/SkeletonWalkRight = SubResource( 24 )
-anims/SkeletonWalkUp = SubResource( 25 )
+anims/RatIdle = SubResource( 28 )
+anims/RatIdleLeft = SubResource( 29 )
+anims/RatIdleRight = SubResource( 30 )
+anims/RatIdleUp = SubResource( 31 )
+anims/RatWalkDown = SubResource( 32 )
+anims/RatWalkLeft = SubResource( 18 )
+anims/RatWalkRight = SubResource( 19 )
+anims/RatWalkUp = SubResource( 33 )
+anims/SkeletonIdle = SubResource( 20 )
+anims/SkeletonIdleLeft = SubResource( 21 )
+anims/SkeletonIdleRight = SubResource( 22 )
+anims/SkeletonIdleUp = SubResource( 23 )
+anims/SkeletonWalkDown = SubResource( 24 )
+anims/SkeletonWalkLeft = SubResource( 25 )
+anims/SkeletonWalkRight = SubResource( 26 )
+anims/SkeletonWalkUp = SubResource( 27 )
 
 [node name="basicShadow" parent="." instance=ExtResource( 2 )]
 show_behind_parent = true
@@ -489,3 +578,11 @@ scale = Vector2( 0.631223, 0.716542 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+
+[node name="Rat" type="Sprite" parent="."]
+visible = false
+position = Vector2( -0.396855, -13.4929 )
+scale = Vector2( 1.63496, 1.63496 )
+texture = ExtResource( 9 )
+hframes = 3
+vframes = 4

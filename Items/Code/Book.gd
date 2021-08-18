@@ -1,8 +1,5 @@
 extends InteractableItem
 
-var activeItemDialogText = [
-	"I'm responding to your active item, in this case, it's a key!"
-]
 
 func _ready():
 	self.itemName = "Book"
@@ -10,16 +7,16 @@ func _ready():
 
 	
 	self.skeletonDialogText = [
-		"This book needs some words",
-		"Something like, \"To my dear friend...\"",
-		"\"I'm sorry you feel you've lost them, but I am not the one who took them.\""
+		"Along the way, you might find it hard to progress in your current form",
+		"Just remember, there's often more than one solution",
+		"Be cautious though, if you run out of items, you may find yourself unable to move forward"
 	]
 	
 	self.dogDialogText = [
 		"You chew through a few of the pages",
 		"Written on the edge of a page, you see a small handwritten passage",
-		" \"To my dear friend...\"",
-		"\"I'm sorry you feel you've lost them, it was not my choice to make.\""
+		" \"He came again tonight...\"",
+		"\"This time it was with a \'gift\'... this has to stop.\""
 	]
 	
 	self.chickenDialogText = [
@@ -31,7 +28,10 @@ func _ready():
 		"TUTORIAL: I'm a book, I can't be picked up, but sometimes I have helpful information.",
 		"Watch out though, if you're in chicken form, you might be compelled to destroy me"
 	]
-	
+
+	self.activeItemDialogText = [
+		"I'm responding to your active item, in this case, it's a potion!"
+	]
 	
 	
 func onInteraction(interactorParent):
@@ -41,7 +41,6 @@ func onInteraction(interactorParent):
 #		print("it's a feather")
 #	elif interactorParent.getActiveItem() == "Key":
 #		print("keys are useful!")
-	
 	
 	
 	if interactionCount == 0:

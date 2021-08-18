@@ -46,7 +46,6 @@ func onInteraction(interactorParent):
 	player = interactorParent
 	if player.currentForm == "Dog":
 		$AnimationPlayer.play("MimicShow")
-		player.addItemToInventory("Potion")
 		if hasSecret == true:
 			dialogText = dogDialogTextWithSecret
 	elif player.hasItem("Key"):
@@ -56,24 +55,24 @@ func onInteraction(interactorParent):
 		$AnimationPlayer.play("MimicShow")
 		dialogText = [
 			"What, you thought you'd just open me?",
-			"Thanks for the meal!",
-			"TODO: Add Game Over screen"
+			"Thanks for the meal!"
 		]
 
 
 
 
 func _on_DialogBox_dialogFinished():	
-	if !player.hasItem("Key"):
+	if !player.hasItem("Key") && player.currentForm != "Dog":
 		player.gameOver()
 	elif player.hasItem("Key") && player.currentForm !=  "Dog":
 		player.removeItemFromInventory("Key")
 		self.queue_free()
 	if player.currentForm == "Dog":
+		player.addItemToInventory("Potion")
 		self.queue_free()
 
 
 
-func _on_AnimationPlayer_animation_finished(anim_name):
+func _on_AnimationPlayer_animation_finished(_anim_name):
 	spawnDialog()
 	pass # Replace with function body.
