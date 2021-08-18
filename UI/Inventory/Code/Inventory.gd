@@ -14,7 +14,7 @@ var inventorySlots = []
 var invIdx = 0
 
 func _ready():
-	self.hide()
+#	self.hide()
 	self.set_as_toplevel(true)
 	for invSlot in numSlots:
 		invSlot.connect("gui_input", self, "updateInvSlot", [invSlot])
@@ -23,9 +23,9 @@ func _ready():
 	setActiveItemSlot(inventorySlots[0])
 
 func _process(_delta):
-	if Input.is_action_just_pressed("inventory"):
-		self.visible = !self.visible
-	self.position = Vector2(get_owner().position.x + 70, get_owner().position.y - 40)
+#	if Input.is_action_just_pressed("inventory"):
+#		self.visible = !self.visible
+	self.position = Vector2(get_owner().position.x - 190, get_owner().position.y + 200)
 	
 
 	
@@ -75,12 +75,18 @@ func updateInvSlot(event: InputEvent, invSlot: InventorySlot):
 func _input(event):
 	if heldItem:
 		heldItem.global_position = get_global_mouse_position()
-	if Input.is_action_just_pressed("testKey"):
-		setActiveItemSlot(inventorySlots[invIdx])
-		invIdx += 1
-		print(invIdx)
-		if invIdx > 5:
-			invIdx = 0
+		
+	if event is InputEventMouseButton:
+		if event.button_index == BUTTON_WHEEL_DOWN && event.pressed:	
+			invIdx -= 1
+			if invIdx < 0:
+				invIdx = 5
+			setActiveItemSlot(inventorySlots[invIdx])
+		elif event.button_index == BUTTON_WHEEL_UP && event.pressed:
+			setActiveItemSlot(inventorySlots[invIdx])
+			invIdx += 1
+			if invIdx > 5:
+				invIdx = 0
 		
 func addItem(itemName) -> bool:
 	for invSlot in numSlots:
@@ -108,8 +114,6 @@ func setActiveItemSlot(invSlot: InventorySlot):
 		print(invSlot.item.itemName)
 	activeItemSlot = invSlot
 	activeItemSlot.isActive = true
-#	activeItemSlotSet = true
-	print("set active item slot")
 	emit_signal("activeItemSlotUpdated")
 		
 

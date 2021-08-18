@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/JewelPixelArt.png-c58f9cc82c990574a54f526d8508d4f2.stex"
+path="res://.import/badComb.png-d8af77945d4395ca55bd9c93388da788.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Items/Assets/JewelPixelArt.png"
-dest_files=[ "res://.import/JewelPixelArt.png-c58f9cc82c990574a54f526d8508d4f2.stex" ]
+source_file="res://Items/Assets/badComb.png"
+dest_files=[ "res://.import/badComb.png-d8af77945d4395ca55bd9c93388da788.stex" ]
 
 [params]
 

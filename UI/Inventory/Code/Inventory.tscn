@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://UI/Inventory/Assets/inventoryHolder.png" type="Texture" id=1]
+[ext_resource path="res://UI/Inventory/Assets/inventoryBG.png" type="Texture" id=1]
 [ext_resource path="res://UI/Inventory/Code/InventoryPanelTemplate.tscn" type="PackedScene" id=2]
 [ext_resource path="res://UI/Inventory/Code/Inventory.gd" type="Script" id=3]
 
@@ -8,8 +8,8 @@
 script = ExtResource( 3 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 237.0
-margin_bottom = 149.0
+margin_right = 458.0
+margin_bottom = 79.0
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 1
@@ -20,11 +20,11 @@ __meta__ = {
 [node name="InvSlotContainer" type="GridContainer" parent="."]
 margin_left = 14.0
 margin_top = 9.0
-margin_right = 226.0
-margin_bottom = 147.0
+margin_right = 448.0
+margin_bottom = 76.0
 custom_constants/vseparation = 6
 custom_constants/hseparation = 10
-columns = 3
+columns = 6
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
@@ -57,23 +57,23 @@ margin_bottom = 64.0
 [node name="InvSlot4" parent="InvSlotContainer" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 0.0
-margin_top = 70.0
-margin_right = 64.0
-margin_bottom = 134.0
+margin_left = 222.0
+margin_top = 0.0
+margin_right = 286.0
+margin_bottom = 64.0
 
 [node name="InvSlot5" parent="InvSlotContainer" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 74.0
-margin_top = 70.0
-margin_right = 138.0
-margin_bottom = 134.0
+margin_left = 296.0
+margin_top = 0.0
+margin_right = 360.0
+margin_bottom = 64.0
 
 [node name="InvSlot6" parent="InvSlotContainer" instance=ExtResource( 2 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 148.0
-margin_top = 70.0
-margin_right = 212.0
-margin_bottom = 134.0
+margin_left = 370.0
+margin_top = 0.0
+margin_right = 434.0
+margin_bottom = 64.0

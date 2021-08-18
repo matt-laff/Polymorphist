@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/JewelPixelArt.png-c58f9cc82c990574a54f526d8508d4f2.stex"
+path="res://.import/ChestPixelArtUpdated.png-4ed0713d6365b22091bd7007dcde815a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Items/Assets/JewelPixelArt.png"
-dest_files=[ "res://.import/JewelPixelArt.png-c58f9cc82c990574a54f526d8508d4f2.stex" ]
+source_file="res://Items/Assets/ChestPixelArtUpdated.png"
+dest_files=[ "res://.import/ChestPixelArtUpdated.png-4ed0713d6365b22091bd7007dcde815a.stex" ]
 
 [params]
 

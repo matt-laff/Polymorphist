@@ -17,4 +17,4 @@ func _ready():
 	$AnimationPlayer.play("GameOver")
 	
 func _on_DialogBox_dialogFinished():
-	get_tree().quit()
+	get_tree().change_scene("res://UI/TitleScreen/Code/TitleScreen.tscn")
