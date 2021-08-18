@@ -27,6 +27,7 @@ var playerDialog = [
 
 
 func _ready():
+	$Fade.show()
 	$AnimatedBackground.show()
 	$AnimatedBackground/AnimationPlayer.play("BackgroundBlur")
 	myDialogText = cutsceneText

@@ -1,20 +1,36 @@
 extends Node2D
 
+signal activeItemSlotUpdated
 
 onready var screenSize = get_viewport_rect().size
 onready var numSlots = $InvSlotContainer.get_children()
 var heldItem = null
+
+var activeItemSlotSet = false
+var activeItemSlot
+
+
+var inventorySlots = []
+var invIdx = 0
 
 func _ready():
 	self.hide()
 	self.set_as_toplevel(true)
 	for invSlot in numSlots:
 		invSlot.connect("gui_input", self, "updateInvSlot", [invSlot])
-		
+		connect("activeItemSlotUpdated", invSlot, "updateStyle")
+		inventorySlots.append(invSlot)
+	setActiveItemSlot(inventorySlots[0])
+
 func _process(_delta):
 	if Input.is_action_just_pressed("inventory"):
 		self.visible = !self.visible
 	self.position = Vector2(get_owner().position.x + 70, get_owner().position.y - 40)
+	
+
+	
+#	if activeItemSlot.item != null:
+#		print(activeItemSlot.item.itemName)
 ##	
 #	self.position.x = clamp(position.x, 0, screenSize.x - 230)
 ##	self.position.y = clamp(position.y, 0, screenSize.y)
@@ -56,9 +72,15 @@ func updateInvSlot(event: InputEvent, invSlot: InventorySlot):
 				invSlot.item.queue_free()
 				invSlot.item = null
 
-func _input(_event):
+func _input(event):
 	if heldItem:
 		heldItem.global_position = get_global_mouse_position()
+	if Input.is_action_just_pressed("testKey"):
+		setActiveItemSlot(inventorySlots[invIdx])
+		invIdx += 1
+		print(invIdx)
+		if invIdx > 5:
+			invIdx = 0
 		
 func addItem(itemName) -> bool:
 	for invSlot in numSlots:
@@ -81,3 +103,13 @@ func removeItem(itemName):
 				invSlot.item.queue_free()
 				invSlot.item = null
 				
+func setActiveItemSlot(invSlot: InventorySlot):
+	if invSlot.item != null:
+		print(invSlot.item.itemName)
+	activeItemSlot = invSlot
+	activeItemSlot.isActive = true
+#	activeItemSlotSet = true
+	print("set active item slot")
+	emit_signal("activeItemSlotUpdated")
+		
+

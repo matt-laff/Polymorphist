@@ -1,12 +1,32 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Items/Code/Key.gd" type="Script" id=1]
 [ext_resource path="res://Items/Assets/KeyPixelArt.png" type="Texture" id=2]
 
+[sub_resource type="Animation" id=2]
+resource_name = "Idle"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -6 ) ]
+}
+
 [node name="Key" type="StaticBody2D"]
+rotation = 1.57533
+scale = Vector2( 1.27945, 1.27945 )
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -0.0138819, -0.214844 )
 rotation = 1.5708
 scale = Vector2( 0.785056, 0.785056 )
 texture = ExtResource( 2 )
@@ -14,3 +34,6 @@ texture = ExtResource( 2 )
 [node name="Collider" type="CollisionPolygon2D" parent="."]
 position = Vector2( 1.12577, 12.511 )
 polygon = PoolVector2Array( -5.44469, 3.94342, 5.51547, 4.29697, 6.84129, 3.05954, 7.46001, -0.210832, 7.10646, -2.77409, 6.39935, -4.18831, 2.2451, -4.71864, 1.71477, -12.6736, -1.99754, -11.7897, -1.73238, -4.18831, -5.53307, -4.18831, -6.8589, -3.12765, -7.38923, 1.29177, -6.15179, 3.76664 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Idle = SubResource( 2 )

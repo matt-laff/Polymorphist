@@ -64,13 +64,14 @@ func onInteraction(interactorParent):
 
 
 func _on_DialogBox_dialogFinished():	
-	if player.hasItem("Key") && player.currentForm !=  "Dog":
+	if !player.hasItem("Key"):
+		player.gameOver()
+	elif player.hasItem("Key") && player.currentForm !=  "Dog":
 		player.removeItemFromInventory("Key")
 		self.queue_free()
 	if player.currentForm == "Dog":
 		self.queue_free()
-	elif !player.hasItem("Key"):
-		get_tree().quit()
+
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):

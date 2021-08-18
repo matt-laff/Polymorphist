@@ -15,6 +15,17 @@
 [node name="StageOne" type="Node"]
 script = ExtResource( 7 )
 
+[node name="backdrop" type="ColorRect" parent="."]
+show_behind_parent = true
+margin_left = -8777.0
+margin_top = -6904.0
+margin_right = 26070.0
+margin_bottom = 20695.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="TileMapTemplate" parent="." instance=ExtResource( 11 )]
 position = Vector2( 30.256, -7.4397 )
 
@@ -22,7 +33,7 @@ position = Vector2( 30.256, -7.4397 )
 position = Vector2( 30.256, -7.4397 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 493, 328 )
+position = Vector2( 488.795, 297.728 )
 
 [node name="DogComb" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 599.089, 153.96 )
@@ -47,6 +58,9 @@ rotation = -0.817545
 [node name="Key" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 1651.89, -445.408 )
 
+[node name="Key2" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 910.219, 79.3114 )
+
 [node name="DogComb2" parent="YSort" instance=ExtResource( 9 )]
 position = Vector2( 310.883, 324.278 )
 
@@ -54,7 +68,10 @@ position = Vector2( 310.883, 324.278 )
 position = Vector2( 273.52, -116.023 )
 
 [node name="Book" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 926, 167 )
+position = Vector2( 797.805, -221.823 )
+
+[node name="Book2" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 1374.59, 354.515 )
 
 [node name="Feather" parent="YSort" instance=ExtResource( 12 )]
 position = Vector2( -285.415, -65.9294 )
@@ -67,6 +84,7 @@ position = Vector2( -84.4147, -231.826 )
 hasSecret = true
 
 [node name="Fade" parent="." instance=ExtResource( 6 )]
+visible = false
 
 [node name="AnimatedBackground" parent="." instance=ExtResource( 8 )]
 pause_mode = 2

@@ -2,16 +2,23 @@ extends KinematicBody2D
 class_name Player
 
 var speed = 225
+var dead = false
 
 onready var animationPlayer: AnimationPlayer = $AnimationPlayer
 onready var currentForm = "Skeleton"
 onready var sprite = $Skeleton
 onready var screenSize = get_viewport_rect().size
 
+
+
 #CHEAT AND TEST KEYS
 #==================
 
 func _process(_delta):
+	
+	if dead == true:
+		gameOver()
+	
 	if Input.is_action_just_pressed("cheatKey"):
 		if currentForm == "Skeleton":
 			updateForm("Chicken")
@@ -90,6 +97,8 @@ func updateForm(newForm):
 			sprite = $Chicken
 		"Dog":
 			sprite = $Dog
+		"Wyvern":
+			sprite = $Wyvern
 	sprite.show()
 	
 
@@ -111,3 +120,15 @@ func hasItem(itemName) -> bool:
 		
 func removeItemFromInventory(itemName):
 	$Inventory.removeItem(itemName)
+
+func getActiveItem():
+	if $Inventory.activeItemSlot.item != null:
+		return $Inventory.activeItemSlot.item.itemName
+	else:
+		return null
+
+
+func gameOver():
+	get_tree().change_scene("res://UI/GameOverScreen/Code/GameOverScreen.tscn")
+	
+	
