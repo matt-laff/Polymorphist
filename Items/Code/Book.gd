@@ -31,6 +31,15 @@ func _ready():
 	]
 	
 func onInteraction(interactorParent):
+	if interactorParent.getActiveItem() == "Potion":
+		print("ahh interesting, a potion")
+	elif interactorParent.getActiveItem() == "Feather":
+		print("it's a feather")
+	elif interactorParent.getActiveItem() == "Key":
+		print("keys are useful!")
+	
+	
+	
 	if interactionCount == 0:
 		dialogText = tutorialText
 		interactionCount += 1

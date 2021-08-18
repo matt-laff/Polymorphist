@@ -121,6 +121,8 @@ func hasItem(itemName) -> bool:
 func removeItemFromInventory(itemName):
 	$Inventory.removeItem(itemName)
 
+func getActiveItem():
+	return $Inventory.activeItemSlot.item.itemName
 
 
 func gameOver():
