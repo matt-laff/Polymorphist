@@ -20,6 +20,7 @@ func _ready():
 		invSlot.connect("gui_input", self, "updateInvSlot", [invSlot])
 		connect("activeItemSlotUpdated", invSlot, "updateStyle")
 		inventorySlots.append(invSlot)
+	setActiveItemSlot(inventorySlots[0])
 
 func _process(_delta):
 	if Input.is_action_just_pressed("inventory"):

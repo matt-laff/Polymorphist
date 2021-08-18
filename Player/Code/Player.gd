@@ -122,7 +122,10 @@ func removeItemFromInventory(itemName):
 	$Inventory.removeItem(itemName)
 
 func getActiveItem():
-	return $Inventory.activeItemSlot.item.itemName
+	if $Inventory.activeItemSlot.item != null:
+		return $Inventory.activeItemSlot.item.itemName
+	else:
+		return null
 
 
 func gameOver():

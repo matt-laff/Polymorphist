@@ -1,6 +1,8 @@
 extends InteractableItem
 
-
+var activeItemDialogText = [
+	"I'm responding to your active item, in this case, it's a key!"
+]
 
 func _ready():
 	self.itemName = "Book"
@@ -30,13 +32,15 @@ func _ready():
 		"Watch out though, if you're in chicken form, you might be compelled to destroy me"
 	]
 	
+	
+	
 func onInteraction(interactorParent):
-	if interactorParent.getActiveItem() == "Potion":
-		print("ahh interesting, a potion")
-	elif interactorParent.getActiveItem() == "Feather":
-		print("it's a feather")
-	elif interactorParent.getActiveItem() == "Key":
-		print("keys are useful!")
+#	if interactorParent.getActiveItem() == "Potion":
+#		dialogText = activeItemDialogText
+#	elif interactorParent.getActiveItem() == "Feather":
+#		print("it's a feather")
+#	elif interactorParent.getActiveItem() == "Key":
+#		print("keys are useful!")
 	
 	
 	
@@ -47,6 +51,9 @@ func onInteraction(interactorParent):
 		self.dialogText = getDialog(interactorParent)
 		if interactorParent.currentForm == "Chicken":
 			self.hide()
+			
+	if interactorParent.getActiveItem() == "Potion":
+		dialogText = activeItemDialogText
 	spawnDialog()
 
 func _on_DialogBox_dialogFinished():
