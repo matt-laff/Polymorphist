@@ -1,6 +1,5 @@
 extends InteractableItem
 
-var player
 var keyDialogText = []
 export var hasSecret = false
 

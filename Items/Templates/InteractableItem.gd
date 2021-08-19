@@ -4,6 +4,8 @@ class_name InteractableItem
 var itemName: String = "defaultItemName"
 var dialogBox_ps: PackedScene = preload("res://UI/DialogBox/Code/DialogBox.tscn")
 
+var player = null
+
 onready var screenSize = get_viewport_rect().size
 
 var interactionCount = 0

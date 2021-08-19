@@ -61,3 +61,19 @@ func _on_Fade_fadeFinished():
 	$Fade.queue_free()
 	myDialogText = playerDialog
 	spawnDialog()
+
+
+func _on_RatHole_ratHoleEntered(_startHole: RatHole):
+	$YSort/Player.global_position = $YSort/RatHole2.getTargetPosition()
+
+
+func _on_RatHole2_ratHoleEntered(_startHole: RatHole):
+	$YSort/Player.global_position = $YSort/RatHole.getTargetPosition()
+
+
+func _on_RatHole4_ratHoleEntered(_startHole: RatHole):
+	$YSort/Player.global_position = $YSort/RatHole3.getTargetPosition()
+
+
+func _on_RatHole3_ratHoleEntered(_startHole: RatHole):
+	$YSort/Player.global_position = $YSort/RatHole4.getTargetPosition()

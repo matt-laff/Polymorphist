@@ -78,15 +78,15 @@ func _input(event):
 		
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_WHEEL_DOWN && event.pressed:	
-			invIdx -= 1
-			if invIdx < 0:
-				invIdx = 5
-			setActiveItemSlot(inventorySlots[invIdx])
-		elif event.button_index == BUTTON_WHEEL_UP && event.pressed:
-			setActiveItemSlot(inventorySlots[invIdx])
 			invIdx += 1
 			if invIdx > 5:
 				invIdx = 0
+			setActiveItemSlot(inventorySlots[invIdx])
+		elif event.button_index == BUTTON_WHEEL_UP && event.pressed:
+			setActiveItemSlot(inventorySlots[invIdx])
+			invIdx -= 1
+			if invIdx < 0:
+				invIdx = 5
 		
 func addItem(itemName) -> bool:
 	for invSlot in numSlots:
