@@ -282,19 +282,19 @@ tracks/0/keys = {
 "values": [ 9, 10, 11, 10 ]
 }
 
-[sub_resource type="Animation" id=28]
+[sub_resource type="Animation" id=18]
 resource_name = "RatIdle"
 
-[sub_resource type="Animation" id=29]
+[sub_resource type="Animation" id=19]
 resource_name = "RatIdleLeft"
 
-[sub_resource type="Animation" id=30]
+[sub_resource type="Animation" id=20]
 resource_name = "RatIdleRight"
 
-[sub_resource type="Animation" id=31]
+[sub_resource type="Animation" id=21]
 resource_name = "RatIdleUp"
 
-[sub_resource type="Animation" id=32]
+[sub_resource type="Animation" id=22]
 resource_name = "RatWalkDown"
 length = 0.2
 loop = true
@@ -311,8 +311,7 @@ tracks/0/keys = {
 "values": [ 1, 0 ]
 }
 
-[sub_resource type="Animation" id=18]
-resource_name = "RatWalkLeft"
+[sub_resource type="Animation" id=23]
 length = 0.2
 loop = true
 tracks/0/type = "value"
@@ -328,8 +327,7 @@ tracks/0/keys = {
 "values": [ 4, 5 ]
 }
 
-[sub_resource type="Animation" id=19]
-resource_name = "RatWalkRight"
+[sub_resource type="Animation" id=24]
 length = 0.2
 loop = true
 tracks/0/type = "value"
@@ -345,7 +343,7 @@ tracks/0/keys = {
 "values": [ 7, 8 ]
 }
 
-[sub_resource type="Animation" id=33]
+[sub_resource type="Animation" id=25]
 resource_name = "RatWalkUp"
 length = 0.2
 loop = true
@@ -362,7 +360,7 @@ tracks/0/keys = {
 "values": [ 9, 10 ]
 }
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=26]
 length = 1.5
 loop = true
 tracks/0/type = "value"
@@ -378,7 +376,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3, 4, 4, 4, 4, 3, 2, 1 ]
 }
 
-[sub_resource type="Animation" id=21]
+[sub_resource type="Animation" id=27]
 length = 1.6
 loop = true
 tracks/0/type = "value"
@@ -394,7 +392,7 @@ tracks/0/keys = {
 "values": [ 12, 12, 13, 14, 15, 16, 17, 16, 15, 14, 13, 12 ]
 }
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=28]
 length = 1.6
 loop = true
 tracks/0/type = "value"
@@ -410,7 +408,7 @@ tracks/0/keys = {
 "values": [ 35, 34, 33, 32, 31, 30, 31, 32, 33, 34, 35 ]
 }
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=29]
 length = 0.9
 loop = true
 tracks/0/type = "value"
@@ -426,7 +424,7 @@ tracks/0/keys = {
 "values": [ 38, 37 ]
 }
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=30]
 length = 1.6
 loop = true
 tracks/0/type = "value"
@@ -442,7 +440,7 @@ tracks/0/keys = {
 "values": [ 6, 5, 8, 7, 9, 10, 11, 10 ]
 }
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id=31]
 length = 0.8
 loop = true
 step = 0.2
@@ -459,7 +457,7 @@ tracks/0/keys = {
 "values": [ 18, 19, 20, 21 ]
 }
 
-[sub_resource type="Animation" id=26]
+[sub_resource type="Animation" id=32]
 length = 0.8
 loop = true
 step = 0.2
@@ -476,7 +474,7 @@ tracks/0/keys = {
 "values": [ 24, 26, 25, 26 ]
 }
 
-[sub_resource type="Animation" id=27]
+[sub_resource type="Animation" id=33]
 length = 0.8
 loop = true
 step = 0.2
@@ -509,8 +507,8 @@ visible = false
 position = Vector2( -2.37839, -19.0273 )
 
 [node name="Skeleton" type="Sprite" parent="."]
-position = Vector2( 1.65176, -40.0221 )
-scale = Vector2( 1.69523, 1.69523 )
+position = Vector2( 0.180934, -28.68 )
+scale = Vector2( 1.23974, 1.23974 )
 texture = ExtResource( 3 )
 hframes = 12
 vframes = 8
@@ -552,22 +550,22 @@ anims/DogWalkDown = SubResource( 14 )
 anims/DogWalkLeft = SubResource( 15 )
 anims/DogWalkRight = SubResource( 16 )
 anims/DogWalkUp = SubResource( 17 )
-anims/RatIdle = SubResource( 28 )
-anims/RatIdleLeft = SubResource( 29 )
-anims/RatIdleRight = SubResource( 30 )
-anims/RatIdleUp = SubResource( 31 )
-anims/RatWalkDown = SubResource( 32 )
-anims/RatWalkLeft = SubResource( 18 )
-anims/RatWalkRight = SubResource( 19 )
-anims/RatWalkUp = SubResource( 33 )
-anims/SkeletonIdle = SubResource( 20 )
-anims/SkeletonIdleLeft = SubResource( 21 )
-anims/SkeletonIdleRight = SubResource( 22 )
-anims/SkeletonIdleUp = SubResource( 23 )
-anims/SkeletonWalkDown = SubResource( 24 )
-anims/SkeletonWalkLeft = SubResource( 25 )
-anims/SkeletonWalkRight = SubResource( 26 )
-anims/SkeletonWalkUp = SubResource( 27 )
+anims/RatIdle = SubResource( 18 )
+anims/RatIdleLeft = SubResource( 19 )
+anims/RatIdleRight = SubResource( 20 )
+anims/RatIdleUp = SubResource( 21 )
+anims/RatWalkDown = SubResource( 22 )
+anims/RatWalkLeft = SubResource( 23 )
+anims/RatWalkRight = SubResource( 24 )
+anims/RatWalkUp = SubResource( 25 )
+anims/SkeletonIdle = SubResource( 26 )
+anims/SkeletonIdleLeft = SubResource( 27 )
+anims/SkeletonIdleRight = SubResource( 28 )
+anims/SkeletonIdleUp = SubResource( 29 )
+anims/SkeletonWalkDown = SubResource( 30 )
+anims/SkeletonWalkLeft = SubResource( 31 )
+anims/SkeletonWalkRight = SubResource( 32 )
+anims/SkeletonWalkUp = SubResource( 33 )
 
 [node name="basicShadow" parent="." instance=ExtResource( 2 )]
 show_behind_parent = true

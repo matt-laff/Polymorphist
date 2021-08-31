@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dungeon_tileset_64.png-504d9159b23d76fb8c70a721695fe590.stex"
+path="res://.import/inventoryHolder.png-44a31de08459e847f0460ba4f6125575.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TileSet/Assets/dungeon_tileset_64.png"
-dest_files=[ "res://.import/dungeon_tileset_64.png-504d9159b23d76fb8c70a721695fe590.stex" ]
+source_file="res://UI/Hotbar/Assets/inventoryHolder.png"
+dest_files=[ "res://.import/inventoryHolder.png-44a31de08459e847f0460ba4f6125575.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

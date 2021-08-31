@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI/Hotbar/Assets/inventoryItemSlot.png" type="Texture" id=1]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 64, 64 )
+
+[node name="HotbarSlotTemplate" type="Panel"]
+rect_min_size = Vector2( 64, 64 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

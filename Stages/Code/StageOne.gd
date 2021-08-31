@@ -8,7 +8,8 @@ var introDialogText = [
 	"Along the way, you'll find potions that, when combined with the right items...",
 	"... Will grant you the ability to change form. Use the forms to find a way out of this strange place...",
 	"...And hopefully, you'll be able to find out who you are along the way...",
-	"Have fun!"
+	"Have fun!",
+	"TODO: Add player \"waking up\" animation, look into making resources"
 ]
 
 var cutsceneText = [

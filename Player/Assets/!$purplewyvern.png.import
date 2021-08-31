@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dungeon_tileset_32.png-6c5f2ad0381b4de171fa09d6ef44eefa.stex"
+path="res://.import/!$purplewyvern.png-0687958012f22fb4455c2fd3204e3f1e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TileSet/Assets/dungeon_tileset_32.png"
-dest_files=[ "res://.import/dungeon_tileset_32.png-6c5f2ad0381b4de171fa09d6ef44eefa.stex" ]
+source_file="res://Player/Assets/!$purplewyvern.png"
+dest_files=[ "res://.import/!$purplewyvern.png-0687958012f22fb4455c2fd3204e3f1e.stex" ]
 
 [params]
 

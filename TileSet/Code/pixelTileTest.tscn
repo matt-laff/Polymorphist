@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://TileSet/Assets/myFirstTileSet.png" type="Texture" id=1]
+[ext_resource path="res://TileSet/Assets/starterTiles.png" type="Texture" id=1]
 
 [sub_resource type="TileSet" id=1]
-0/name = "myFirstTileSet.png 0"
+0/name = "starterTiles.png 0"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 32, 16, 16, 16 )
+0/region = Rect2( 48, 16, 16, 16 )
 0/tile_mode = 0
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
@@ -17,11 +17,11 @@
 0/shape_one_way_margin = 0.0
 0/shapes = [  ]
 0/z_index = 0
-1/name = "myFirstTileSet.png 1"
+1/name = "starterTiles.png 1"
 1/texture = ExtResource( 1 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 32, 32, 16, 16 )
+1/region = Rect2( 64, 16, 16, 16 )
 1/tile_mode = 0
 1/occluder_offset = Vector2( 0, 0 )
 1/navigation_offset = Vector2( 0, 0 )
@@ -31,11 +31,11 @@
 1/shape_one_way_margin = 0.0
 1/shapes = [  ]
 1/z_index = 0
-2/name = "myFirstTileSet.png 2"
+2/name = "starterTiles.png 2"
 2/texture = ExtResource( 1 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 32, 0, 16, 16 )
+2/region = Rect2( 64, 32, 16, 16 )
 2/tile_mode = 0
 2/occluder_offset = Vector2( 0, 0 )
 2/navigation_offset = Vector2( 0, 0 )
@@ -45,11 +45,11 @@
 2/shape_one_way_margin = 0.0
 2/shapes = [  ]
 2/z_index = 0
-3/name = "myFirstTileSet.png 3"
+3/name = "starterTiles.png 3"
 3/texture = ExtResource( 1 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 48, 0, 16, 16 )
+3/region = Rect2( 48, 32, 16, 16 )
 3/tile_mode = 0
 3/occluder_offset = Vector2( 0, 0 )
 3/navigation_offset = Vector2( 0, 0 )
@@ -59,11 +59,11 @@
 3/shape_one_way_margin = 0.0
 3/shapes = [  ]
 3/z_index = 0
-4/name = "myFirstTileSet.png 4"
+4/name = "starterTiles.png 4"
 4/texture = ExtResource( 1 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 64, 0, 16, 16 )
+4/region = Rect2( 144, 32, 16, 16 )
 4/tile_mode = 0
 4/occluder_offset = Vector2( 0, 0 )
 4/navigation_offset = Vector2( 0, 0 )
@@ -73,11 +73,11 @@
 4/shape_one_way_margin = 0.0
 4/shapes = [  ]
 4/z_index = 0
-5/name = "myFirstTileSet.png 5"
+5/name = "starterTiles.png 5"
 5/texture = ExtResource( 1 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
-5/region = Rect2( 64, 48, 16, 16 )
+5/region = Rect2( 144, 16, 16, 16 )
 5/tile_mode = 0
 5/occluder_offset = Vector2( 0, 0 )
 5/navigation_offset = Vector2( 0, 0 )
@@ -87,11 +87,11 @@
 5/shape_one_way_margin = 0.0
 5/shapes = [  ]
 5/z_index = 0
-6/name = "myFirstTileSet.png 6"
+6/name = "starterTiles.png 6"
 6/texture = ExtResource( 1 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
-6/region = Rect2( 16, 48, 16, 16 )
+6/region = Rect2( 144, 80, 16, 16 )
 6/tile_mode = 0
 6/occluder_offset = Vector2( 0, 0 )
 6/navigation_offset = Vector2( 0, 0 )
@@ -101,11 +101,11 @@
 6/shape_one_way_margin = 0.0
 6/shapes = [  ]
 6/z_index = 0
-7/name = "myFirstTileSet.png 7"
+7/name = "starterTiles.png 7"
 7/texture = ExtResource( 1 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
-7/region = Rect2( 48, 48, 16, 16 )
+7/region = Rect2( 48, 80, 16, 16 )
 7/tile_mode = 0
 7/occluder_offset = Vector2( 0, 0 )
 7/navigation_offset = Vector2( 0, 0 )
@@ -115,11 +115,11 @@
 7/shape_one_way_margin = 0.0
 7/shapes = [  ]
 7/z_index = 0
-8/name = "myFirstTileSet.png 8"
+8/name = "starterTiles.png 8"
 8/texture = ExtResource( 1 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
-8/region = Rect2( 16, 16, 16, 16 )
+8/region = Rect2( 64, 80, 16, 16 )
 8/tile_mode = 0
 8/occluder_offset = Vector2( 0, 0 )
 8/navigation_offset = Vector2( 0, 0 )
@@ -129,11 +129,11 @@
 8/shape_one_way_margin = 0.0
 8/shapes = [  ]
 8/z_index = 0
-9/name = "myFirstTileSet.png 9"
+9/name = "starterTiles.png 9"
 9/texture = ExtResource( 1 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
-9/region = Rect2( 16, 0, 16, 16 )
+9/region = Rect2( 176, 80, 16, 16 )
 9/tile_mode = 0
 9/occluder_offset = Vector2( 0, 0 )
 9/navigation_offset = Vector2( 0, 0 )
@@ -143,31 +143,80 @@
 9/shape_one_way_margin = 0.0
 9/shapes = [  ]
 9/z_index = 0
+10/name = "starterTiles.png 10"
+10/texture = ExtResource( 1 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 176, 32, 16, 16 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "starterTiles.png 11"
+11/texture = ExtResource( 1 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 208, 32, 16, 16 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "starterTiles.png 12"
+12/texture = ExtResource( 1 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 208, 80, 16, 16 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "starterTiles.png 13"
+13/texture = ExtResource( 1 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 64, 128, 16, 16 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "starterTiles.png 14"
+14/texture = ExtResource( 1 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 64, 112, 16, 16 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
 
 [node name="pixelTileTest" type="TileMap"]
 scale = Vector2( 4, 4 )
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( 65538, 9, 0, 65539, 2, 0, 65540, 2, 0, 65541, 2, 0, 65542, 2, 0, 65543, 2, 0, 65544, 2, 0, 65545, 2, 0, 65546, 4, 0, 131074, 8, 0, 131075, 1610612736, 0, 131076, 1610612736, 0, 131077, 1610612736, 0, 131078, 1610612736, 0, 131079, 1610612736, 0, 131080, 1610612736, 0, 131081, 1610612736, 0, 131082, 1610612744, 0, 196610, 8, 0, 196611, 1610612737, 0, 196612, 1610612737, 0, 196613, 1610612737, 0, 196614, 1610612737, 0, 196615, 1610612737, 0, 196616, 1610612737, 0, 196617, 1610612737, 0, 196618, 1610612744, 0, 262146, 8, 0, 262147, 1610612737, 0, 262148, 1610612737, 0, 262149, 1610612737, 0, 262150, 1610612737, 0, 262151, 1610612737, 0, 262152, 1610612737, 0, 262153, 1610612737, 0, 262154, 1610612744, 0, 327682, 6, 0, 327683, 1610612739, 0, 327684, 1610612739, 0, 327685, 1610612739, 0, 327686, 1610612739, 0, 327687, 1610612739, 0, 327688, 1610612739, 0, 327689, 1610612739, 0, 327690, 5, 0 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2( -0.222733, 70.9277 )
-scale = Vector2( 1, 0.337121 )
-polygon = PoolVector2Array( 41.8221, 25.9194, 42.2676, 47.7464, 165.212, 47.9691, 165.657, 26.1421 )
-
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2( 40.3014, -23.954 )
-scale = Vector2( 0.0490108, 2.0101 )
-polygon = PoolVector2Array( 41.8221, 25.9194, 71.9291, 51.5148, 158.273, 51.8472, 167.362, 36.1133, 165.657, 26.1421 )
-
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2( 156.341, -23.0631 )
-scale = Vector2( 0.0490108, 2.0101 )
-polygon = PoolVector2Array( 67.3845, 26.0302, 71.9291, 51.5148, 158.273, 51.8472, 167.362, 36.1133, 165.657, 26.1421 )
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2( -0.8909, -3.8147e-06 )
-polygon = PoolVector2Array( 41.8221, 25.9194, 42.2676, 47.7464, 165.212, 47.9691, 165.657, 26.1421 )
+tile_data = PoolIntArray( -131069, 37, 0, -131068, 18, 0, -131067, 18, 0, -131066, 18, 0, -131065, 18, 0, -131064, 18, 0, -131063, 18, 0, -131062, 18, 0, -131061, 18, 0, -131060, 18, 0, -131059, 18, 0, -131058, 32, 0, -65533, 37, 0, -65532, 50, 0, -65531, 50, 0, -65530, 50, 0, -65529, 50, 0, -65528, 50, 0, -65527, 50, 0, -65526, 50, 0, -65525, 50, 0, -65524, 50, 0, -65523, 50, 0, -65522, 32, 0, 0, 0, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 5, 0, 65536, 3, 0, 65537, 14, 0, 65538, 14, 0, 65539, 14, 0, 65540, 14, 0, 65541, 14, 0, 65542, 14, 0, 65543, 14, 0, 65544, 14, 0, 65545, 14, 0, 65546, 14, 0, 65547, 14, 0, 65548, 14, 0, 65549, 14, 0, 65550, 14, 0, 65551, 4, 0, 131072, 3, 0, 131073, 13, 0, 131074, 13, 0, 131075, 13, 0, 131076, 13, 0, 131077, 13, 0, 131078, 13, 0, 131079, 13, 0, 131080, 13, 0, 131081, 13, 0, 131082, 13, 0, 131083, 13, 0, 131084, 13, 0, 131085, 13, 0, 131086, 13, 0, 131087, 4, 0, 196608, 3, 0, 196609, 13, 0, 196610, 13, 0, 196611, 13, 0, 196612, 13, 0, 196613, 13, 0, 196614, 13, 0, 196615, 13, 0, 196616, 13, 0, 196617, 13, 0, 196618, 13, 0, 196619, 13, 0, 196620, 13, 0, 196621, 13, 0, 196622, 13, 0, 196623, 4, 0, 262144, 3, 0, 262145, 13, 0, 262146, 13, 0, 262147, 13, 0, 262148, 13, 0, 262149, 13, 0, 262150, 13, 0, 262151, 13, 0, 262152, 13, 0, 262153, 13, 0, 262154, 13, 0, 262155, 13, 0, 262156, 13, 0, 262157, 13, 0, 262158, 13, 0, 262159, 4, 0, 327680, 3, 0, 327681, 13, 0, 327682, 13, 0, 327683, 13, 0, 327684, 13, 0, 327685, 13, 0, 327686, 13, 0, 327687, 13, 0, 327688, 13, 0, 327689, 13, 0, 327690, 13, 0, 327691, 13, 0, 327692, 13, 0, 327693, 13, 0, 327694, 13, 0, 327695, 4, 0, 393216, 3, 0, 393217, 13, 0, 393218, 13, 0, 393219, 13, 0, 393220, 13, 0, 393221, 13, 0, 393222, 13, 0, 393223, 13, 0, 393224, 13, 0, 393225, 13, 0, 393226, 13, 0, 393227, 13, 0, 393228, 13, 0, 393229, 13, 0, 393230, 13, 0, 393231, 4, 0, 458752, 3, 0, 458753, 13, 0, 458754, 13, 0, 458755, 13, 0, 458756, 13, 0, 458757, 13, 0, 458758, 13, 0, 458759, 13, 0, 458760, 13, 0, 458761, 13, 0, 458762, 13, 0, 458763, 13, 0, 458764, 13, 0, 458765, 13, 0, 458766, 13, 0, 458767, 4, 0, 524288, 7, 0, 524289, 8, 0, 524290, 8, 0, 524291, 8, 0, 524292, 8, 0, 524293, 8, 0, 524294, 8, 0, 524295, 8, 0, 524296, 8, 0, 524297, 8, 0, 524298, 8, 0, 524299, 8, 0, 524300, 8, 0, 524301, 8, 0, 524302, 8, 0, 524303, 6, 0, 589826, 50, 0, 589827, 50, 0, 589828, 50, 0, 589829, 50, 0, 589830, 50, 0, 589831, 50, 0, 589832, 50, 0, 589833, 50, 0, 589834, 50, 0, 589835, 50, 0, 589836, 50, 0, 589837, 50, 0, 589838, 16, 0, 655362, 50, 0, 655363, 50, 0, 655364, 50, 0, 655365, 50, 0, 655366, 50, 0, 655367, 50, 0, 655368, 50, 0, 655369, 50, 0, 655370, 50, 0, 655371, 50, 0, 655372, 50, 0, 655373, 50, 0, 655374, 16, 0, 720898, 50, 0, 720899, 50, 0, 720900, 50, 0, 720901, 50, 0, 720902, 50, 0, 720903, 50, 0, 720904, 50, 0, 720905, 50, 0, 720906, 50, 0, 720907, 50, 0, 720908, 50, 0, 720909, 50, 0, 720910, 16, 0, 786434, 39, 0, 786435, 39, 0, 786436, 39, 0, 786437, 39, 0, 786438, 39, 0, 786439, 39, 0, 786440, 48, 0, 786441, 50, 0, 786442, 49, 0, 786443, 40, 0, 786444, 40, 0, 786445, 40, 0, 786446, 44, 0, 851977, 50, 0, 917512, 34, 0, 917513, 50, 0, 917514, 32, 0, 983048, 34, 0, 983049, 50, 0, 983050, 32, 0, 1048584, 34, 0, 1048585, 50, 0, 1048586, 32, 0, 1114125, 15, 0, 1179653, 36, 0, 1179655, 21, 0, 1179656, 21, 0, 1179657, 50, 0, 1179658, 21, 0, 1179659, 21, 0, 1179660, 21, 0, 1179661, 32, 0, 1245189, 36, 0, 1245190, 50, 0, 1245193, 50, 0, 1245194, 50, 0, 1245195, 50, 0, 1245196, 50, 0, 1245197, 32, 0, 1310725, 36, 0, 1310726, 50, 0, 1310727, 50, 0, 1310729, 50, 0, 1310730, 50, 0, 1310731, 50, 0, 1310732, 50, 0, 1310733, 32, 0, 1376264, 42, 0, 1376265, 42, 0, 1376266, 42, 0, 1376267, 42, 0, 1376268, 42, 0, 1376269, 44, 0 )
