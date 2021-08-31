@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/myFirstTileSet.png-1a52833a8e162c70563fcec82cbf5b0d.stex"
+path="res://.import/inventoryItemSlot.png-acae4cbce9207f9aacb4a63ec4898180.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TileSet/Assets/myFirstTileSet.png"
-dest_files=[ "res://.import/myFirstTileSet.png-1a52833a8e162c70563fcec82cbf5b0d.stex" ]
+source_file="res://UI/Hotbar/Assets/inventoryItemSlot.png"
+dest_files=[ "res://.import/inventoryItemSlot.png-acae4cbce9207f9aacb4a63ec4898180.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

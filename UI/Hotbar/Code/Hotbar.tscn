@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://UI/Hotbar/Assets/inventoryHolder.png" type="Texture" id=1]
+[ext_resource path="res://UI/Hotbar/Code/HotbarSlotTemplate.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/Hotbar/Code/Hotbar.gd" type="Script" id=3]
+
+[node name="Hotbar" type="Node2D"]
+position = Vector2( -2, 1 )
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 2.0
+margin_top = -1.0
+margin_right = 219.0
+margin_bottom = 73.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HotbarSlotContainer" type="GridContainer" parent="."]
+margin_left = 12.0
+margin_top = 6.0
+margin_right = 212.0
+margin_bottom = 70.0
+columns = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HotbarSlotTemplate" parent="HotbarSlotContainer" instance=ExtResource( 2 )]
+margin_right = 64.0
+margin_bottom = 64.0
+
+[node name="HotbarSlotTemplate2" parent="HotbarSlotContainer" instance=ExtResource( 2 )]
+margin_left = 68.0
+margin_right = 132.0
+margin_bottom = 64.0
+
+[node name="HotbarSlotTemplate3" parent="HotbarSlotContainer" instance=ExtResource( 2 )]
+margin_left = 136.0
+margin_right = 200.0
+margin_bottom = 64.0

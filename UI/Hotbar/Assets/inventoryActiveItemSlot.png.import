@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/objects_tilset_64.png-d2ab6aeb1af80b33ec6fce85ce3802ea.stex"
+path="res://.import/inventoryActiveItemSlot.png-e5b016b4a4a0b8d293caa207ae7d3068.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TileSet/Assets/objects_tilset_64.png"
-dest_files=[ "res://.import/objects_tilset_64.png-d2ab6aeb1af80b33ec6fce85ce3802ea.stex" ]
+source_file="res://UI/Hotbar/Assets/inventoryActiveItemSlot.png"
+dest_files=[ "res://.import/inventoryActiveItemSlot.png-e5b016b4a4a0b8d293caa207ae7d3068.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

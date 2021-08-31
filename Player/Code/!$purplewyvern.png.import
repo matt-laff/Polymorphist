@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tester.png-292f414cc8fbf5001cbd777fe12e74a3.stex"
+path="res://.import/!$purplewyvern.png-46e33c20888fa485be51e014517690d4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TileSet/Assets/tester.png"
-dest_files=[ "res://.import/tester.png-292f414cc8fbf5001cbd777fe12e74a3.stex" ]
+source_file="res://Player/Code/!$purplewyvern.png"
+dest_files=[ "res://.import/!$purplewyvern.png-46e33c20888fa485be51e014517690d4.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
