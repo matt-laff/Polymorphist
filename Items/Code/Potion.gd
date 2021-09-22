@@ -1,11 +1,14 @@
 extends PickableItem
 
 class_name Potion
+var itemDescription = "This is a potion"
 
 func _ready():
 	itemName = "Potion"
+	itemDescription = "It's a potion."
 	interactionText = "Pick Up"
-
+	formData = null
+	
 	skeletonDialogText = [
 		"Nice, a potion!"
 	]
@@ -23,7 +26,7 @@ func _ready():
 	
 func onInteraction(interactorParent):
 	dialogText = getDialog(interactorParent)
-	if interactorParent.addItemToInventory(itemName) == true:
+	if interactorParent.addItemToInventory(self) == true:
 		pickedUp = true
 	else:
 		inventoryFull()

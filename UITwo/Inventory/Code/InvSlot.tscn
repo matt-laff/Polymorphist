@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UITwo/Inventory/Assets/InventorySlotOutline.png" type="Texture" id=1]
+[ext_resource path="res://UITwo/Inventory/Code/InvSlot.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 17.8524, 18.0585 )
+
+[node name="InvSlot" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 49.3123
+margin_top = 26.8706
+margin_right = -942.688
+margin_bottom = -541.129
+rect_min_size = Vector2( 36, 36 )
+mouse_filter = 2
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2( 17.9345, 17.8645 )
+shape = SubResource( 2 )
+
+[node name="PanelCenter" type="Position2D" parent="."]
+position = Vector2( 18, 18 )
+
+[node name="ItemIcon" type="Sprite" parent="PanelCenter"]
+
+[connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_Area2D_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_Area2D_mouse_exited"]

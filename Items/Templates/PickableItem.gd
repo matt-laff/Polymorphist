@@ -7,6 +7,7 @@ var inventoryIsFullDialog = [
 	"Your inventory is full!"
 ]
 
+
 onready var collisionShape = $Collider
 
 func disableCollision():
@@ -14,3 +15,6 @@ func disableCollision():
 func _on_DialogBox_dialogFinished():
 	if pickedUp == true:
 		self.queue_free()
+
+func getIconTexture():
+	return $Sprite.texture
