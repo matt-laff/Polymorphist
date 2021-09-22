@@ -5,7 +5,8 @@ class_name Potion
 func _ready():
 	itemName = "Potion"
 	interactionText = "Pick Up"
-
+	formData = null
+	
 	skeletonDialogText = [
 		"Nice, a potion!"
 	]
@@ -23,7 +24,7 @@ func _ready():
 	
 func onInteraction(interactorParent):
 	dialogText = getDialog(interactorParent)
-	if interactorParent.addItemToInventory(itemName) == true:
+	if interactorParent.addItemToInventory(self) == true:
 		pickedUp = true
 	else:
 		inventoryFull()

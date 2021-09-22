@@ -24,6 +24,7 @@ margin_left = -9289.85
 margin_top = -7116.66
 margin_right = 25557.2
 margin_bottom = 20482.4
+mouse_filter = 2
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -106,8 +107,4 @@ scale = Vector2( 1.98578, 1.05636 )
 [node name="notificationPosition" type="Position2D" parent="."]
 position = Vector2( 275.663, 400.314 )
 
-[connection signal="ratHoleEntered" from="YSort/RatHole" to="." method="_on_RatHole_ratHoleEntered"]
-[connection signal="ratHoleEntered" from="YSort/RatHole2" to="." method="_on_RatHole2_ratHoleEntered"]
-[connection signal="ratHoleEntered" from="YSort/RatHole3" to="." method="_on_RatHole3_ratHoleEntered"]
-[connection signal="ratHoleEntered" from="YSort/RatHole4" to="." method="_on_RatHole4_ratHoleEntered"]
 [connection signal="fadeFinished" from="Fade" to="." method="_on_Fade_fadeFinished"]

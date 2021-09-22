@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Inventory/Gem.gd" type="Script" id=1]
+[ext_resource path="res://Inventory/Assets/JewelPixelArt.png" type="Texture" id=2]
+[ext_resource path="res://Inventory/Assets/form2.png" type="Texture" id=3]
+[ext_resource path="res://Inventory/Assets/SkeletonEyes.png" type="Texture" id=4]
+[ext_resource path="res://Inventory/Assets/InvBG.png" type="Texture" id=5]
+
+[sub_resource type="AnimatedTexture" id=1]
+frames = 8
+frame_0/texture = ExtResource( 4 )
+frame_1/delay_sec = 0.0
+frame_2/delay_sec = 0.0
+frame_3/delay_sec = 0.0
+frame_4/delay_sec = 0.0
+frame_5/texture = ExtResource( 5 )
+frame_5/delay_sec = 0.0
+frame_6/delay_sec = 0.0
+frame_7/delay_sec = 0.0
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 11.7222
+
+[node name="Gem" type="Node2D"]
+script = ExtResource( 1 )
+itemName = "Gem"
+itemDescription = "It's a Gem!"
+formData = ExtResource( 3 )
+formAnim = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -1.26134, -0.420448 )
+scale = Vector2( 0.445008, 0.445008 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="IconTexture" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[connection signal="input_event" from="StaticBody2D" to="." method="_on_StaticBody2D_input_event"]
