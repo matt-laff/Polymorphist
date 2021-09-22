@@ -6,7 +6,6 @@ var canTransform = false
 var inventoryIsFullDialog = [
 	"Your inventory is full!"
 ]
-var itemDescription = "This is in PickableItem.gd"
 
 
 onready var collisionShape = $Collider

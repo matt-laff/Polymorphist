@@ -1,9 +1,11 @@
 extends PickableItem
 
 class_name Potion
+var itemDescription = "This is a potion"
 
 func _ready():
 	itemName = "Potion"
+	itemDescription = "It's a potion."
 	interactionText = "Pick Up"
 	formData = null
 	
