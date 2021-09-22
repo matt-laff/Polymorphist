@@ -1,7 +1,7 @@
 extends KinematicBody2D
 class_name Player
 
-var speed = 225
+var speed = 150
 var dead = false
 
 onready var animationPlayer: AnimationPlayer = $AnimationPlayer
@@ -47,10 +47,10 @@ func _physics_process(_delta):
 	else:
 		updateIdleAnimation()
 	if Input.is_action_pressed("sprint"):
-		speed = 300
+		speed = 225
 		animationPlayer.playback_speed = 1.35
 	if Input.is_action_just_released("sprint"):
-		speed = 225
+		speed = 150
 		animationPlayer.playback_speed = 1
 #	self.position.x = clamp(position.x, 0, screenSize.x)
 #	self.position.y = clamp(position.y, 0, screenSize.y)

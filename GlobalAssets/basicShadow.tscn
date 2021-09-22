@@ -3,5 +3,6 @@
 [ext_resource path="res://Player/Assets/basicShadow.png" type="Texture" id=1]
 
 [node name="basicShadow" type="Sprite"]
-position = Vector2( 0.166855, -20.69 )
+position = Vector2( 0.266065, -8.58322 )
+scale = Vector2( 0.37062, 0.404636 )
 texture = ExtResource( 1 )

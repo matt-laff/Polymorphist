@@ -495,7 +495,7 @@ tracks/0/keys = {
 script = ExtResource( 1 )
 
 [node name="Interactor" parent="." instance=ExtResource( 6 )]
-position = Vector2( -0.603546, -24.9896 )
+position = Vector2( -1.07549, -24.9896 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.390064, -1.34818 )
@@ -507,8 +507,8 @@ visible = false
 position = Vector2( -2.37839, -19.0273 )
 
 [node name="Skeleton" type="Sprite" parent="."]
-position = Vector2( 0.180934, -28.68 )
-scale = Vector2( 1.23974, 1.23974 )
+position = Vector2( -0.055027, -16.1737 )
+scale = Vector2( 0.738307, 0.738307 )
 texture = ExtResource( 3 )
 hframes = 12
 vframes = 8
@@ -569,8 +569,8 @@ anims/SkeletonWalkUp = SubResource( 33 )
 
 [node name="basicShadow" parent="." instance=ExtResource( 2 )]
 show_behind_parent = true
-position = Vector2( -0.54518, -15.8719 )
-scale = Vector2( 0.631223, 0.716542 )
+position = Vector2( -1.23967, -5.31753 )
+scale = Vector2( 0.324284, 0.368116 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
@@ -584,6 +584,7 @@ hframes = 3
 vframes = 4
 
 [node name="Inventory" parent="." instance=ExtResource( 7 )]
+visible = false
 margin_left = 38.2259
 margin_top = -249.828
 margin_right = 131.354
